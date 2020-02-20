@@ -1,0 +1,253 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,palatine]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Alejandro Armas}{}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+%\address{\faMapMarker\enspace  26D, Building H, Dachong City Garden, Nanshan District,}{Shenzhen, Guangdong Province, China (100190)}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+  
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\labelitemi}{\small$\bullet$}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-20mm}
+\begin{center}
+\begin{tabular}{ c c }
+\enspace {armas@ucdavis.edu} & \enspace (925)-470-6873\\  
+\end{tabular}
+\end{center}
+
+\section{EDUCATION}
+{\customcventry{Expected 2021}{Bachelor of Science in Electrical Engineering}{University of California, Davis 
+}{Davis, California}{}{}}
+ 
+{\customcventry{ Jun. 2017-Jun. 2019}{Transfer Program in Computer Science}{Los Medanos College (LMC), Diablo Valley College}{Pittsburg, California}{}{GPA: 3.5/4.0}}
+
+\textbf{\textit{Relavant Coursework:}} Algorithm Design & Analysis, Electromagnetics, Introduction to Signals and Systems, Optimization, Discrete Mathematics, Circuit Analysis II, Circuit Analysis I, Program Design and Data Structures, Assembly Language Programming, Linear Algebra, Differential Equations, Multivariable Calculus.
+
+\textbf{\textit{Skills and Certifications:}} Fluent in Spanish, C++, R, Matlab, Python, Unix/Linux, \LaTeX, VS Code, Windows OS, Microsoft Office Suite, \href{https://www.datacamp.com/statement-of-accomplishment/course/07c1f44fa24da787ad4a7ee038f52a622b15595f}{Intermediate Python for Data Science}, \href{https://www.datacamp.com/statement-of-accomplishment/course/5b4af50e44431f325da6122107d24feffd80f524}{Unsupervised Learning in R} , \href{https://www.datacamp.com/statement-of-accomplishment/course/7cdd5b78387544cd96d2741330d187f51819d81a}{Introduction to the Tidyverse}, \href{https://www.datacamp.com/statement-of-accomplishment/course/fa17997adb30bbdc091b9f5a5137d5de069558b4}{Python Data Science Toolbox (Part 1, Part 2)}, \href{https://www.datacamp.com/statement-of-accomplishment/course/5ba58b6676880e2680721ea1008ec6e576d304e2}{Introduction to Python.}
+
+
+\section{RESEARCH EXPERIENCE}
+{\customcventry{Jan. 2020}{\textbf{Workshop Participant}}{Massachusetts Institute of Technology}{Cambridge, Massachusetts}{}{}}
+  {\begin{itemize}
+    \item 1 of 80 students/faculty invited to a seven-day intensive workshop where using MATLAB, we learned to analyze experimental data and fit simple models for applications ranging from mapping Hippocampal place cells, visualization of fMRI data to analyzing calcium imaging.
+  \end{itemize}
+}
+
+\setlength{\parskip}{0.5em}
+
+{\customcventry{Jun.–Aug. 2019}{\textbf{Interdisciplinary and Quantitative REU Summer Intern}}{Universidad de Puerto Rico, Rio Piedras}{San Juan, Puerto Rico}{}{}}
+  {\begin{itemize}
+    \item Aggregated analytical tools like R studio, git, Unix/Linux and various openly sourced CRAN libraries to create a pipeline that visualizes data obtained from infrared beam breaking monitors.
+    \item Instituted scalable script that distinguishes insect category by locomotor activity using clustering algorithms to assist circadian biologists, replacing human categorization for large scale bee experiments. 
+    \item Communicated scientific findings by preparing manuscript for future publication, weekly presentations for collaborators and blog posts detailing lab procedures and technical details pertinent to our group’s research.
+  \end{itemize}
+}
+
+\section{TEACHING EXPERIENCE}
+
+
+\setlength{\parskip}{0.5em}
+
+{\customcventry{ May. 2016- Jul. 2017}{\textbf{Stem Tutor}}{Los Medanos College MESA}{Pittsburg, California}{}{}}
+  {\begin{itemize}
+    \item Facilitated learning environment for underrepresented students by educating the subjects of Physics (Classical and Electromagnetism), C++ Programming, Mathematics and General Chemistry Sequence.
+  \end{itemize}
+}
+
+\newpage
+
+\setlength{\parskip}{0.5em}
+
+{\customcventry{  Sep. 2018 – Dec. 2019}{\textbf{General Tutor}}{Los Medanos College Disabled Students Program}{Pittsburg, California}{}{}}
+  {\begin{itemize}
+    \item Adapted teaching methodologies to meet the unique needs of differently abled students, to allow them to fully participate in and benefit from courses offered at the college.
+  \end{itemize}
+}
+
+\setlength{\parskip}{0.5em}
+
+{\customcventry{Aug. 2018 – Dec. 2019}{\textbf{Math Tutor}}{Los Medanos College Mathematics Lab}{Pittsburg, California}{}{}}
+  {\begin{itemize}
+    \item Implemented weekly lesson plans to increase Algebra, Geometry, Calculus Series (Singular and Multivariable), Linear Algebra, and Ordinary Differential Equations retention for LMC students.
+  \end{itemize}
+}
+
+
+\section{ACADEMIC CONFERENCES \& PRESENTATIONS}
+
+\underline{\textbf{Oral and Poster Presentations:}}
+
+\quad
+
+  {\begin{itemize}
+    \item \textbf{Alejandro Armas}, Sofía Meléndez-Cartagena, Patricia Ordóñez, Jose L. Agosto-Rivera. Time Series Analysis and Clustering of Insects by Locomotive Patterns. Poster presentation at: 2020 UC Davis ECExpo. Feb 26, 2020; Santa Clara, California.
+    \item \textbf{Alejandro Armas}, Sofía Meléndez-Cartagena, Patricia Ordóñez, Jose L. Agosto-Rivera. Time Series Analysis and Clustering of Insects by Locomotive Patterns. Poster presentation at: 2019 Annual Biomedical Research Conference for Minority Students (ABRCMS). Nov 13-Nov 17, 2019; Anaheim, California.
+    \item \textbf{Alejandro Armas}, Sofía Meléndez-Cartagena, Patricia Ordóñez, Jose L. Agosto-Rivera. Developing Tools for the Clustering of Circadian Locomotor Data. Oral presentation at: Interdisciplinary and Quantitative REU Final Presentation. Aug 1, 2019; Rio Piedras, San Juan.
+
+  \end{itemize}
+}
+
+\section{VOLUNTEER EXPERIENCES}
+
+\underline{\textbf{Panel Presentations:}}
+
+\quad
+
+  {\begin{itemize}
+    \item \textbf{Alejandro Armas}, Chris Hipolito, Brittany Bates.  AvenueE, Engineering and Computer Science Majors Panel discussion at: Discover UC Davis 2020. Feb 21, 2020; Davis, California.
+    \item Zakk Lowe, \textbf{Alejandro Armas}, Shanice Blake, Ulisses Garcia, Christopher Hipolito. The Reality of Transferring. Panel presentation at: 2020 Emerging MESA Champions Camp. Feb 8-9, 2020; Sausalito, California.
+
+
+  \end{itemize}
+}
+
+\section{HONORS \& ACHIEVEMENTS}
+\begin{minipage}{\maincolumnwidth}%
+
+  \underline{\textbf{Professional Memberships:}}
+
+  \quad
+
+    	\begin{itemize}
+          \item Member, Artificial Intelligence Society at UC Davis \hfill {\itshape Jan. 2020 - Present}
+          \item Member, NSF LSAMP/CAMP program at UC Davis   \hfill {\itshape Dec. 2019 - Present}
+          \item Member, UC Davis AvenueE 2019 Cohort (1 of 30 students) \hfill {\itshape Sep. 2019 - Present}
+          \item Member, Institute of Electrical and Electronics Engineers (IEEE) \hfill {\itshape Sep. 2019 - Present}
+      \end{itemize}%
+
+  \quad
+
+  \underline{\textbf{Awards, Grants, Fellowships:}}
+  
+  \quad
+
+    	\begin{itemize}
+          \item UC Davis ECE Undergraduate Travel Grant (\$500) 
+          \item AvenueE Travel Grant (\$500) 
+          \item ABRCMS Student Travel Award (\$685.57) 
+          \item UC Davis AvenueE Scholarship (\$10500) 
+          \item EOPS Perpetual Spirit Scholarship (\$1000)
+          \item LMC Academic Competition scholarship (\$500)
+          \item AvenueE Community College Scholar Award (\$1000)
+          \item Los Medanos College Academic Honors Spring 2019
+          \item Los Medanos College Dean's List 2017-2019
+		\end{itemize}%
+\end{minipage}%
+
+      
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+\end{CJK*}
+\end{document}
+
+
+%% end of file `template.tex'.
