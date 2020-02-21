@@ -57,8 +57,12 @@ This tool will serve an integral portion for the collection of time series data 
 
 
 [1] Edward Latorre, Kelvin López, Ivan F. Rodríguez, Matías Rosner Ortiz, Rémi Mégret, Tugrul Giray, José L. Agosto, “Recognition of Fanning Bees from Video using Convolutional Neural Networks”, SIDIM 2019, Humacao, March 1–2 2019.
+
 [2] Ivan F. Rodríguez, Rémi Mégret, Roian Egnor, Kristin Branson, José L. Agosto, Tugrul Giray, Edgar Acuña . “Multiple Insect and Animal Tracking in Video using Part Affinity Fields”, Visual observation and analysis of Vertebrate And Insect Behavior (VAIB), International Conference on Pattern Recognition (ICPR), Beijin, China, 20–24 August 2018.
+
 [3] Ivan F. Rodriguez, Kristin Branson, Edgar Acuña, Rémi Mégret, José L. Agosto-Rivera, Tugrul Giray, “Automatic monitoring of the foraging behavior of tagged and untagged honey bees”, SIDIM 2019, Humacao, March 1–2 2019.
+
 [4] L.M. Wyman and M.H. Richards. Colony social organization of Lasioglossum malachurum Kirby (Hymenoptera, Halictidae) in Southern Greece , insectes Sociaux 50(3):201–211 , July 2003.
+
 [5] Manuel Antonio Giannoni-Guzmán, Tugrul Giray, José L. Agosto-Rivera, Emmanuel Rivera, “Direct behavioral observations uncover shift work on honey bee Apis mellifera” , Entomological Society of America Annual Meeting 2013, November 2013.
 

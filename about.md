@@ -30,7 +30,7 @@ key: page-about
 
  I am a student at the University of California, Davis interested in researching robust systems that can understand data with minimal human supervision to model human intelligence. I hope that this blog can prove to be useful for helping others digest complicated topics. Furthermore, my intention to pursue academic research and teaching is to lead and advance this emerging field to facilitate inclusive minority and women participation in research and engineering with science education. If you'd like to see more of my professional experience, make sure to check out the Curriculum Vitae tab. This webpage is meant to show I am more than an academic in spite of how passionate I am of science. 
 
-hi
+By the way, think of all the awesome equations I'm going to be posting here! 
 $$
 f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x}
 $$
@@ -40,11 +40,6 @@ $$
 
  -----------------------
 
-
-------------------------
- In case you don't believe me, I used to look like this 40 pounds ago! 
-
- ![When I was fat!](/assets/images/aboutme/IMG_4138.JPG){:height="45%" width="45%"}  ![Now!](/assets/images/aboutme/IMG_4643.JPG){:height="45%" width="45%"}
 
 
 
