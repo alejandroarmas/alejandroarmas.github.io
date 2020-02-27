@@ -37,7 +37,7 @@ Experiment begins with newborn bees, merely one day old, called brood. They are 
     <em> Figure 1: Showcase how the bee should be handled during the tagging process. [Source “me”]</em>
 </p>
 
-
+Check out my new website! <a href="https://alejandroarmas.github.io/" style="color:#000001;" target="_blank">alejandroarmas.github.io</a>
 
 # Neural network bee detection
 
