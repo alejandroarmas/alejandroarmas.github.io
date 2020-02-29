@@ -26,7 +26,10 @@ titles:
 key: page-about
 ---
 
-![Here's a picture of me smiling!](/assets/images/aboutme/smile.jpg){:height="60%" width="60%"}
+<p align="center">
+  <img src="/assets/images/aboutme/smile.jpg" width="60%" height="60%" alt="Here's a picture of me smiling!">
+  
+</p>
 
  I am a student at the University of California, Davis interested in researching robust systems that can understand data with minimal human supervision to model human intelligence. I hope that this blog can prove to be useful for helping others digest complicated topics. Furthermore, my intention to pursue academic research and teaching is to lead and advance this emerging field to facilitate inclusive minority and women participation in research and engineering with science education. If you'd like to see more of my professional experience, make sure to check out the Curriculum Vitae tab. This webpage is meant to show I am more than an academic in spite of how passionate I am of science. 
 
