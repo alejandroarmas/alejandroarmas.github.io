@@ -176,7 +176,7 @@ socket_client_hw1.c
 
 ```
 
-For HW#1, the professor asks us to run the first program, ecs36b_hw1_client, to obtain information regarding your own student record via a JSON (Javascript Object Notation) format, from his server. And, you will need to store the JSON in a text file named [STUDENT ID].txt. And, you will just need to submit this file for this homework assignment.
+For HW#1, the professor asks us to run the first program, ecs36b_hw1_client, to obtain information regarding your own student record via a JSON (Javascript Object Notation) format, from his server named Cyrus. And, you will need to store the JSON in a text file named [STUDENT ID].txt. And, you will just need to submit this file for this homework assignment.
 
 More specifically, you will need to enter the following:
 
@@ -206,7 +206,7 @@ You need to submit remotely to the [Computer Science Instructional Facility (CSI
 
 Following instruction from [CSIF documentation](http://csifdocs.cs.ucdavis.edu/about-us/csif-general-faq#TOC-How-can-I-remotely-login-to-the-CSIF-computers-from-home-), and my command line again, since SSH, or Secure Shell is the protocol that CSIF uses for people who wish to log in remotely.
 
-Out of the [list of computers](http://iceman.cs.ucdavis.edu/nagios3/cgi-bin/status.cgi?hostgroup=all) to choose from, I arbitrarily picked pc23 since it is a prime number.
+Out of the [list of computers](http://iceman.cs.ucdavis.edu/nagios3/cgi-bin/status.cgi?hostgroup=all) to choose from, I arbitrarily picked pc23 since it is a prime number. It really does not matter which one you select. 
 
 If you remember from the JSON object from earlier, my uID is "Stayin". The command you use to connect to a single computer from the CSIF network is:
 
@@ -277,7 +277,7 @@ Using Vim, a command line text editor, we are now creating a new file named [STU
 {"status": "successful", "name": "Armas, Alejandro", "sID": "XXXXXXXXX", "uID": "stayin", "session": "02", "time": "Tue Apr  7 13:34:35 2020", "ip address": "107.0.114.25", "port": "57106", "code": "1424268980"}
 
 ```
-Now press :wq to save and quit. As you can see you just created a new textfile which you will submit. 
+Now when not in insert mode, press :wq to save and quit. As you can see you just created a new textfile which you will submit. 
 
 ```console
 stayin@ad3.ucdavis.edu@pc23:~/ecs36b_s2020/hw1$ ls
