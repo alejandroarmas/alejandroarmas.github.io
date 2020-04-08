@@ -1,7 +1,7 @@
 ---
 layout: article
 title: How to Submit Homework for ECS36B
-tags: classwork
+tags: classwork programming
 aside:
     toc: true
   
