@@ -1,12 +1,12 @@
 ---
 layout: article
-title: How to connect to UC Davis Library VPN on Ubuntu
+title: Connecting to UC Davis Library VPN on Ubuntu
 tags: software programming
 aside:
     toc: true
   
 ---
-You might be wondering why all this is necessary to do. Lots of services and features such as the New York Times and Textbooks are available to UC Davis students only if they have physical access to the Campus wifi. UC Davis Virtual private network service or VPN, serviced by the Information and Educational Technology department, mitigate this problem to allow you to send and recieve data as if you were there. This is especially critical during times like now with the Covid-19 pandemic and probably future Fall quarter cancelling's because of Northern California's tendency to catch on fire a lot.
+You might be wondering why all this is necessary to do. Lots of services and features such as the New York Times and Textbooks are available to UC Davis students only if they have physical access to the Campus wifi. UC Davis Virtual private network service or VPN, serviced by the Information and Educational Technology department, mitigate this problem to allow you to send and recieve data as if you were there. This is especially critical during times like now with the Covid-19 pandemic and probably future Fall quarter cancelling's because of Northern California's tendency to catch on fire.
 
 
 ## Installing Pulse Secure VPN
