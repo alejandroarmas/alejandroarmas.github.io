@@ -7,16 +7,15 @@ aside:
   
 ---
 
+I hope this article serves as a basic introduction to the terminology of probability theory!
+
+## Random Variables
+
 Considering that an **experiment** is a procedure that produces well defined outcomes, like taking a course and finishing with a certain grade letter, we see that a **random variable** is a function which maps random outcomes from experiments to numerical values $X : \Omega \to R $. For example we could allow people to shop at supermarkets and let our random variable X = the number of infected shoppers with Covid-19 or X = the number of A's you finish your degree with at University. The set of all outcomes in an experiment is called the **sample space** usually denoted by $\Omega$. Typicallly Random Variables are denoted by a capital letter and if they map to a finite or countably infinite range, then we say it is a *discrete* random variable.
 
-The computing of the probability that our *discrete* random variable X takes on some value x is called the Probability Mass Function (PMF) $ f_{x}(x) = P(X = x)$ or  **distribution** of our random variable. The PMF has three important properties:
+The computing of the probability that our *discrete* random variable X takes on some value x is called the Probability Mass Function (PMF) or  **distribution** of our random variable.
 
-1. $\forall x \in X \ \ \ \ 0 \leq f_{x}(x) \leq 1 $
-
-2. $\sum_{x \in X} f_{x}(x) = 1$
-
-3. $f_{x}(x) = 0$ for any value X cannot take. 
-
+$$ f_{x}(x) = P(X = x)$$
 ## Expectation and Variance
 
 We are interested in various functions of random variables. In the long run of repeatedly conducting experiments, if your sample space is finite your outcome average will arrive at the **expected value**, the first of these functions, defined as:
