@@ -81,6 +81,11 @@ We can quickly see it's PMF is:
 
 $$ f_{x}(x) = \sum_{x \in X} (1 - p)^k \cdot P$$
 
-### Other things...
+## Other things...
 
 This article will continually get updated as the quarter continues... Stay tuned!
+
+
+## References
+
+**Elementary Probability for Applications**, Rick Durret, 1st edition.
