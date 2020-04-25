@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Random Variables and Distributions
-tags: probability
+tags: probability Mathematics
 aside:
     toc: true
   
@@ -69,13 +69,12 @@ The intuition underlying this PMF is that we would like to know how many **k** o
 
 In addition, we can derive expressions for the Expectation Value and Variance. Suppose $X \sim Binom(n, P)$ then:
 
-$$ E[x] = n \cdot P $$
-$$ Var(x) = n \cdot P(1 - P) $$
+$$ E[x] = n \cdot P \\ Var(x) = n \cdot P(1 - P) $$
 
 
 ### Geometric Distribution
 
-When we repeat an experiment with a binary sample space over and over so long as the same random variable occurs, we see that our random variable exhibits this special type of distributions.
+When we repeat an experiment with a binary sample space repeatedly obtaining the same outcome until a different outcome occurs, we see that our random variable exhibits this special type of distributions.
 
 We can quickly see it's PMF is:
 
