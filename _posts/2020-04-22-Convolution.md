@@ -72,7 +72,7 @@ Intuitively, this integral could be thought of as some infinitesimally thin samp
 
 ## Conclusion
 
-Now the real incredible part is now that we are capable of characterizing the entire system simply the transmittion of some instantaneous excitation into the system!
+Now the real incredible part is now that we are capable of characterizing the entire system simply by the transmittion of some instantaneous excitation into the system!
 
 
 ## References
