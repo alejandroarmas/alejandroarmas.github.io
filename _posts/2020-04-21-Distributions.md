@@ -62,23 +62,40 @@ $$ Var(x) = P(1 - P) $$
 
 The result of **n** independent Bernoulli Trials is referred to as a Binomial Distribution. We find: 
 
-$$ f{x}(x) = {n \choose k} \cdot P^k \cdot (1-P)^{n - k}$$
+$$ f{x}(k) = {n \choose k} \cdot P^k \cdot (1-P)^{n - k}$$
 
-The intuition underlying this PMF is that we would like to know how many **k** occurances of a random variable occur in **n** trials.  
+The intuition underlying this PMF is that we would like to know the probability of **k** occurances of a random variable occur in **n** trials.  
 
 
 In addition, we can derive expressions for the Expectation Value and Variance. Suppose $X \sim Binom(n, P)$ then:
 
 $$ E[x] = n \cdot P \\ Var(x) = n \cdot P(1 - P) $$
 
+### Negative Binomial Distribution
+
+Instead of being interested in knowing the probability of *k* occurances of a random variable occur in *n* trials, we instead focus on the probability that it takes **n** trials to achieve **k** occurances of a random variable. If you have n independent bernoulli trials with probability of succcess p and you are interested in the number of trials until success then we say $x \sim NB(k , p)$, who's probability mass function is:
+
+$$f_x(n) = P(X = n) = { n - 1 \choose k - 1} \cdot P^k \cdot (1-P)^{n - k}$$
+
+If we choose the occurances of the random variable to be $k = 1$, we can observe a special case of the Negative Binomial Distribution called the *Geometric Distribution* where:
+
+$$f_x(n) = P(X = n) = { n - 1 \choose 0} \cdot P \cdot (1-P)^{n - 1}$$
+
+We can think of this taking *n* trials to finally achieve a success, or also k failures if $k = n-1$ before a success. 
 
 ### Geometric Distribution
 
-When we repeat an experiment with a binary sample space repeatedly obtaining the same outcome until a different outcome occurs, we see that our random variable exhibits this special type of distributions.
+When we repeat an experiment with a binary sample space repeatedly obtaining the same outcome until a different outcome with probability $P$ occurs, we see that our random variable exhibits this special type of distributions.
 
 We can quickly see it's PMF is:
 
-$$ f_{x}(x) = \sum_{x \in X} (1 - p)^k \cdot P$$
+$$ f_{x}(k) = P(X = k) = (1 - P)^k \cdot P$$
+
+Typically we use this when we would like to know the probability that *k* failures happen in an experiment before a success. It's unique expectation are variance values are as follows:
+
+$$E[x] = \frac{1 - P}{P}$$
+
+$$Var(x) = \frac{1 - P}{P^2}$$
 
 ## Other things...
 

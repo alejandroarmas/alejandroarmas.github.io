@@ -13,7 +13,7 @@ Say we had a set of three greek characters representing the names of three frien
 
 $$ n \times (n - 1) \times \dots \times (n - k - 1) = \frac{n!}{(n - k)!}$$
 
-However this does not account for when we have no care for order, because let's face it, if your friend is playing on a specific side, the game should be equal and we won't care the "order" that our equation just accounted for. Consider the possibilities we had from our previous example $P = \{ (\alpha, \beta) , (\alpha, \gamma), (\beta, \gamma), (\beta, \alpha), (\gamma, \alpha) , (\gamma, \beta) \}$. There seems to be some redundancy and we can remove a few, resulting in $C = \{ (\alpha, \beta) , (\alpha, \gamma), (\beta, \gamma) \}$. This is called a **combination**. Notice the combination is of size 3 while the permutation is of size 6. You simply divide by $k$ or *competitors* you are considering in this game. Then we can see that a combination is defined by:
+However this does not account for when we have no care for order, because let's face it, if your friend is playing on a specific side, the game should be equal and we won't care the "order" that our equation just accounted for. Consider the possibilities we had from our previous example $P = \{ (\alpha, \beta) , (\alpha, \gamma), (\beta, \gamma), (\beta, \alpha), (\gamma, \alpha) , (\gamma, \beta) \}$. There seems to be some redundancy and we can remove a few, resulting in $C = \{ (\alpha, \beta) , (\alpha, \gamma), (\beta, \gamma) \}$. This is called a **combination**. Notice the combination is of size 3 while the permutation is of size 6. You simply divide by $k$ *competitors* you are considering in this game. Then we can see that a combination is defined by:
 
 $$ {n \choose k } = \frac{n!}{(n - k)! \cdot k!}$$
 

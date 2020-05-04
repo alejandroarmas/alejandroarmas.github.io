@@ -1,6 +1,6 @@
 ---
 layout: article
-title: How to Submit Homework for ECS36B
+title: Compiling C code and submitting to CSIF
 tags: classwork programming
 aside:
     toc: true
@@ -143,7 +143,9 @@ $ gcc -c -g -Wall -Wstrict-prototypes socket_client_hw1.c
 
 - ```-g ``` flag generates debug information to be used by GDB debugger
 - ```-Wall``` flag enables all compiler's warning messages. Convention is to always use this.
-- ```-Wstrict-prototypes``` A flag ... which I'm not sure yet, but I will update soon!
+- ```-Wstrict-prototypes``` Warn if a function is declared or defined without specifying the argument types.
+(An old-style function definition is permitted without a warning if preceded by
+a declaration that specifies the argument types.)
 
 
 Will essentially translate your human readable code into binary for the computer to understand. This command in particular compiles the C source code ```socket_client_hw1.c```into an object file ```socket_server_hw1.o```.    
