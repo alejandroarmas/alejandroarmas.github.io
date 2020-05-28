@@ -86,9 +86,76 @@ $$
 
 $$
 
-Recall the dimensions of matricies **A** and **B** are 2 x 3 and 3 x 2 respectively and notice how the 2 rows in **A** multiplied with the 2 columns in **B**. 
+Recall the dimensions of matricies **A** and **B** are two by three (2 x 3) and  three by two (3 x 2) respectively and notice how the 2 rows in **A** multiplied with the 2 columns in **B**. 
 
-We can conclude that for matrix multiplication between any two matricies requires the dimension of the first to be of m x b and the second to be of b x n, resulting in a final matrix that is m x n. 
+We can conclude that for matrix multiplication between any two matricies requires the number of columns in your first matrix be identical to the number of rows in your second matrix being multiplied.
+
+Formally we define a matrix **A** of size n x b and the second matrix **B** to be of b x m.  
+
+$$
+\boldsymbol{A} = 
+
+\begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1b}\\
+a_{21} & a_{22} & \dots & a_{2b}\\
+\dots &  \dots &  \dots & \dots \\
+a_{n1} & a_{n2} & \dots & a_{nb}
+\end{pmatrix}\
+
+$$
+
+$$
+\boldsymbol{B} = 
+
+\begin{pmatrix}
+b_{11} & b_{12} & \dots & b_{1m}\\
+b_{21} & b_{22} & \dots & b_{2m}\\
+\dots &  \dots &  \dots & \dots \\
+b_{b1} & b_{b2} & \dots & b_{bm}
+\end{pmatrix}\
+
+$$
+
+In general the multiplication of two matricies:
+
+$$
+\boldsymbol{A} \boldsymbol{B} = \boldsymbol{C}   
+$$
+
+$$
+\begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1b}\\
+a_{21} & a_{22} & \dots & a_{2b}\\
+\dots &  \dots &  \dots & \dots \\
+a_{n1} & a_{n2} & \dots & a_{nb}
+\end{pmatrix}\
+
+\begin{pmatrix}
+b_{11} & b_{12} & \dots & b_{1m}\\
+b_{21} & b_{22} & \dots & b_{2m}\\
+\dots &  \dots &  \dots & \dots \\
+b_{b1} & b_{b2} & \dots & b_{bm}
+\end{pmatrix}\
+
+=
+
+\begin{pmatrix}
+c_{11} & c_{12} & \dots & c_{1m}\\
+c_{21} & c_{22} & \dots & c_{2m}\\
+\dots &  \dots &  \dots & \dots \\
+c_{n1} & c_{n2} & \dots & c_{nm}
+\end{pmatrix}\
+
+$$
+
+Multiplication **A** x **B** results in a final matrix that is of dimension n x m. Origininally we took the dot product from the first row of matrix **A** with the first column of matrix **B** and that gave us the first index, which formally is said to be $ c_{11} = \sum_{k=0}^{b}a_{1k} \cdot b_{k1}$. 
+
+In general, each index is computed with the formula:
+
+$$ 
+c_{ij} = \sum_{k=0}^{b}a_{ik} \cdot b_{kj}
+$$
+
 
 ## Intuition behind Matrix Multiplication.
 
