@@ -1,6 +1,8 @@
 ---
 layout: article
 title: Matrix Multiplication
+author:
+  Alejandro Armas
 tags:  Mathematics
 aside:
     toc: true

@@ -1,6 +1,8 @@
 ---
 layout: article
 title: Random Variables and Distributions
+author:
+  Alejandro Armas
 tags: probability Mathematics
 aside:
     toc: true

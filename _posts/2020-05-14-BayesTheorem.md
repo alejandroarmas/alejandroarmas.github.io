@@ -1,6 +1,8 @@
 ---
 layout: article
 title: Bayes Theorem and ROC
+author:
+  Alejandro Armas
 tags: probability Mathematics
 aside:
     toc: true

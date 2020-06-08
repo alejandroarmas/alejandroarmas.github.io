@@ -1,7 +1,9 @@
 ---
 layout: article
-title: Marking populations of honey bees for generating multivariate time series
-tags: research interning bees machine-learning
+title: Marking populations of Honey Bees for Generating Multivariate Time Series
+tags: research interning bees Machine-Learning
+author:
+  Alejandro Armas
 aside:
     toc: true
   

@@ -2,6 +2,8 @@
 layout: article
 title: The Convolution Integral
 tags: Electrical-Engineering Mathematics
+author:
+  Alejandro Armas
 aside:
     toc: true
   
