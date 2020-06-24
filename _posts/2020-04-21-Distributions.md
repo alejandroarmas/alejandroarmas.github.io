@@ -3,7 +3,7 @@ layout: article
 title: Random Variables and Distributions
 author:
   Alejandro Armas
-tags: probability Mathematics
+tags: Probability Mathematics
 aside:
     toc: true
   
@@ -13,9 +13,9 @@ I hope this article serves as a basic introduction to the terminology of probabi
 
 ## Random Variables
 
-Considering that an **experiment** is a procedure that produces well defined outcomes, like taking a course and finishing with a certain grade letter, we see that a **random variable** is a function which maps random outcomes from experiments to numerical values $X : \Omega \to R $. 
+Considering that an **experiment** is a procedure that produces well defined outcomes, like taking a course and finishing with a certain grade letter, we see that a **random variable** is a function which maps random outcomes from experiments to numerical values $X : \Omega \to R $. The set of all possible numerical values attainable is called the **support** of the random variable.
 
-For example we could allow people to shop at supermarkets and let our random variable X = the number of infected shoppers with Covid-19 or X = the number of A's you finish your degree with at University. The set of all outcomes in an experiment is called the **sample space** usually denoted by $\Omega$. 
+For example we could allow people to shop at supermarkets and let our random variable Y = the number of infected shoppers with Covid-19 or X = the number of A's you finish your degree with at University. The set of all outcomes in an experiment is called the **sample space** usually denoted by $\Omega$.
 
 Typicallly Random Variables are denoted by a capital letter and if they map to a finite or countably infinite range, then we say it is a *discrete* random variable. Now if you consider a RV with an uncountably infinite sample space it is said to be a *continuous* variable. An example of this would be mapping the heights of all humans on earth to a continuous random variable X. 
 
@@ -76,7 +76,16 @@ The result of **n** independent Bernoulli Trials is referred to as a Binomial Di
 
 $$ f_{x}(k) = {n \choose k} \cdot P^k \cdot (1-P)^{n - k}$$
 
-The intuition underlying this PMF is that we would like to know the probability of **k** occurances of a random variable occur in **n** trials.  
+<p>
+    <img src="/assets/images/distributions/bino.gif" alt="Binomial Distribution Figure"/>
+    <br>
+    <em>Photo Courtesy of 
+    <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.html">[“Binomial Distribution”]</a>
+    </em>
+</p>
+
+
+The intuition underlying this PMF is that we would like to know the probability of **k** occurances of a random variable occur in **n** trials. In the figure shown, there are 100 trials and we observe the likelyhood of k positive experiements, gets shifted to the right as p increases.
 
 
 In addition, we can derive expressions for the Expectation Value and Variance. Suppose $X \sim Binom(n, P)$ then:
@@ -88,6 +97,10 @@ $$ E[x] = n \cdot P \\ Var(x) = n \cdot P(1 - P) $$
 Instead of being interested in knowing the probability of *k* occurances of a random variable occur in *n* trials, we instead focus on the probability that it takes **n** trials to achieve **k** occurances of a random variable. If you have n independent bernoulli trials with probability of succcess p and you are interested in the number of trials until success then we say $x \sim NB(k , p)$, who's probability mass function is:
 
 $$f_x(n) = P(X = n) = { n - 1 \choose k - 1} \cdot P^k \cdot (1-P)^{n - k}$$
+
+
+Looking at the figure, we consider the likelihood we achieve 20 positive results n trials into an experiment with different probability values p. 
+
 
 If we choose the occurances of the random variable to be $k = 1$, we can observe a special case of the Negative Binomial Distribution called the *Geometric Distribution*. Since ${ m \choose 0} = 1 $ we can reduce this equation to:
 
@@ -127,6 +140,47 @@ $$E[x] = \frac{a + b}{2}$$
 
 $$Var(x) = \frac{(a - b)^2}{12}$$
 
+<p>
+    <img src="/assets/images/distributions/unifPDF.png" alt="Uniform Probability Density Function"/>
+    <br>
+    <em>Uniform Probability Density Function. Photo Courtesy of 
+    <a href="https://probabilityformula.org/uniform-distribution.html">[“Probability Formula”]</a>
+    </em>
+</p>
+
+<p>
+    <img src="/assets/images/distributions/unifCDF.png" alt="Uniform Cumulative Density Function"/>
+    <br>
+    <em>Uniform Cumulative Density Function. Photo Courtesy of 
+    <a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)">[“Wikipedia”]</a>
+    </em>
+</p>
+
+### Exponential Distribution
+
+Used many times to model the failure of some event occuring as time passes. i.e. the next Covid Pandemic :0 
+
+$$f_{x}(x) = \begin{cases}
+\lambda e^{- \lambda x} & \text{if } x \geq 0\\
+0  & \text{otherwise} \\
+\end{cases}$$
+
+<p>
+    <img src="/assets/images/distributions/exponentialPDF.png" alt="Exponential Probability Density Function"/>
+    <br>
+    <em>Exponential Probability Density Function. Photo Courtesy of 
+    <a href="https://en.wikipedia.org/wiki/Exponential_distribution">[“Wikipedia”]</a>
+    </em>
+</p>
+
+<p>
+    <img src="/assets/images/distributions/ExponentialCDF.png" alt="Exponential Cumulative Density Function"/>
+    <br>
+    <em>Exponential Cumulative Density Function. Photo Courtesy of 
+    <a href="https://en.wikipedia.org/wiki/Exponential_distribution">[“Wikipedia”]</a>
+    </em>
+</p>
+
 ## Guassian (Normal) Distribution
 
 Many physical phenomenon are modelled after this distribution. In fact, this distribution deserves it's own blogpost. For now, we say a continuous random variable $X \sim Norm( \mu, \sigma^2)$ if it satisifies this Probability Density Function:
@@ -137,6 +191,23 @@ $$f_x(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{\frac{-1}{2}\big( \frac{x - \mu}{\sig
 $$E[x] = \mu$$
 
 $$Var(x) = \sigma$$
+
+<p>
+    <img src="/assets/images/distributions/NormalPDF.png" alt="Gaussian Probability Density Function"/>
+    <br>
+    <em>Gaussian Probability Density Function. Photo Courtesy of 
+    <a href="https://en.wikipedia.org/wiki/Normal_distribution">[“Wikipedia”]</a>
+    </em>
+</p>
+
+
+<p>
+    <img src="/assets/images/distributions/NormalCDF.png" alt="Gaussian Cumulative Density Function"/>
+    <br>
+    <em>Gaussian Cumulative Density Function. Photo Courtesy of 
+    <a href="https://en.wikipedia.org/wiki/Normal_distribution">[“Wikipedia”]</a>
+    </em>
+</p>
 
 ## Other things...
 
