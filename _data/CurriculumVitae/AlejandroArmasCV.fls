@@ -192,8 +192,14 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-OUTPUT /home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.out
+INPUT /home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.out
+INPUT /home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.out
+INPUT /home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.out
+INPUT /home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.out
 OUTPUT /home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.pdf
+INPUT /home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.out
+INPUT /home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.out
+OUTPUT /home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.out
 INPUT /usr/share/texmf/tex/latex/CJK/UTF8/UTF8.bdg
 INPUT /usr/share/texmf/tex/latex/CJK/UTF8/UTF8.enc
 INPUT /usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr

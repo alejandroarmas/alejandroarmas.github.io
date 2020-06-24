@@ -1,15 +1,16 @@
 # Fdb version 3
-["bibtex AlejandroArmasCV"] 0 "AlejandroArmasCV.aux" "AlejandroArmasCV.bbl" "AlejandroArmasCV" 0
+["bibtex AlejandroArmasCV"] 1591989115 "AlejandroArmasCV.aux" "AlejandroArmasCV.bbl" "AlejandroArmasCV" 1591989115
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1480098433 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "AlejandroArmasCV.aux" 1590358231 1156 64667417dc7de3d220af364d2e8f1204 ""
+  "AlejandroArmasCV.aux" 1591989115 1156 1fa2c5b84df3b1a85ccec1e446d7a3e2 ""
   "AlejandroArmasCV.bcf" 0 -1 0 ""
   "publications.bib" 0 -1 0 ""
   (generated)
+  "AlejandroArmasCV.blg"
   "AlejandroArmasCV.bbl"
-["pdflatex"] 1590358231 "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.tex" "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.pdf" "AlejandroArmasCV" 1590358231
+["pdflatex"] 1591989115 "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.tex" "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.pdf" "AlejandroArmasCV" 1591989115
   "/etc/texmf/web2c/texmf.cnf" 1571966924 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.aux" 1590358231 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.tex" 1590358230 14113 79cd2bf503f222c7188cef2c98382dc2 ""
+  "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.aux" 1591989115 1156 1fa2c5b84df3b1a85ccec1e446d7a3e2 ""
+  "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.tex" 1591989114 14227 011073f255f2a5b4b730ddb370e45e01 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm" 1480098696 3584 929cdff2b7a8c11bd4d49fd68cb0ae70 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1480098701 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -137,13 +138,14 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1571966946 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1571966959 4143868 3a79e632d66ac5115a17f101d35b6b62 ""
-  "AlejandroArmasCV.aux" 0 -1 0 ""
+  "AlejandroArmasCV.aux" 1591989115 1156 1fa2c5b84df3b1a85ccec1e446d7a3e2 ""
   "AlejandroArmasCV.bbl" 0 -1 0 "bibtex AlejandroArmasCV"
-  "AlejandroArmasCV.tex" 1590358230 14113 79cd2bf503f222c7188cef2c98382dc2 ""
+  "AlejandroArmasCV.out" 1591989115 913 da53099b40fcdd2b7380f94e5980c555 ""
+  "AlejandroArmasCV.tex" 1591989114 14227 011073f255f2a5b4b730ddb370e45e01 ""
   (generated)
-  "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.log"
-  "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.pdf"
-  "AlejandroArmasCV.pdf"
   "AlejandroArmasCV.log"
-  "AlejandroArmasCV.aux"
   "AlejandroArmasCV.out"
+  "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.log"
+  "AlejandroArmasCV.pdf"
+  "/home/alejandro/Documents/alejandroarmas.github.io/_data/CurriculumVitae/AlejandroArmasCV.pdf"
+  "AlejandroArmasCV.aux"
