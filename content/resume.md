@@ -25,7 +25,7 @@ startup.
 -   Trained Agents in OpenAI’s Gym Atari environments using Deepmind’s Acme and Reverb, connecting remotely through the OpenMind Computing Cluster to perform GPU accelerated workloads.
 
 ### Intern - Interdisciplinary and Quantitative Biology REU |  Jun. 2019 - Aug. 2019 
-##### [Universidad de Puerto Rico, Rio Piedras Rio Piedras, Puerto Rico](https://iqbioreu.uprrp.edu/index.php/2019-cohort/)
+##### [Universidad de Puerto Rico, Rio Piedras](https://iqbioreu.uprrp.edu/index.php/2019-cohort/) | San Juan, Puerto Rico
 - Achieved meaningful results by using k-means clustering and ggplot2, tidyr, and tibble to cluster Lassioglassum malachurum by locomotor activity, providing biologists with an automated categorization of large scale bee experiments that replaced manual sorting.
 - Assisted in writing contributions to supervisor’s thesis, presented weekly to colleagues, and created blog posts to document lab procedures; effectively communicating research findings to a variety of audiences.
 ## PROJECTS
