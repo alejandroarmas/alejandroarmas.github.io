@@ -8,33 +8,24 @@ rootFontSize = "90%"
 +++
 
 
-<!-- 
-\begin{center}
-    \textbf{\Huge \scshape Alejandro Armas} \\ \vspace{1pt}
-    \small 1+(925) 470-6873 $ |$ \href{mailto:armas@ucdavis.edu}{\underline{armas@ucdavis.edu}} $ |$ 
-    \href{https://alejandroarmas.github.io}{\underline{alejandroarmas.github.io}}
-    \href{https://linkedin.com/in/armasalejandro/}{\underline{linkedin.com/alejandro}} $ |$
-    \href{https://github.com/alejandroarmas}{\underline{github.com/alejandro}}
-\end{center} -->
-
 ## EXPERIENCE
 
 
 ### Intern - Ground Software | Aug. 2022 – Nov. 2022
-##### Astranis Space Technologies | San Francisco, CA
+##### [Astranis Space Technologies](https://www.astranis.com) | San Francisco, CA
 
 - Dramatically decreased satellite noise for satellite operators by modifying back-end application, react frontend, and
 in-house event streaming processor to ensure idempotent writes into Elasticsearch.
 - Enhanced system resiliency by revising all software services and leveraging Kubernetes to pull configurations on pod
 startup.
 ### Intern - MIT Summer Research Program | May 2020 - Aug. 2020 
-##### Massachusetts Institute of Technology | Remote, CA
+##### [Massachusetts Institute of Technology](https://biology.mit.edu/program-details-bsg-msrp-bio/) | Remote, CA
 -   Investigated the underpinnings which confer advantages to reinforcement learning algorithms; where learning a distribution of cumulative sum of discounted rewards, is advantageous to merely learning its expected value.
 -   Implemented quantile regression loss function and back-propagation algorithms to learn underlying data distributions.
 -   Trained Agents in OpenAI’s Gym Atari environments using Deepmind’s Acme and Reverb, connecting remotely through the OpenMind Computing Cluster to perform GPU accelerated workloads.
 
 ### Intern - Interdisciplinary and Quantitative Biology REU |  Jun. 2019 - Aug. 2019 
-##### Universidad de Puerto Rico, Rio Piedras Rio Piedras, Puerto Rico
+##### [Universidad de Puerto Rico, Rio Piedras Rio Piedras, Puerto Rico](https://iqbioreu.uprrp.edu/index.php/2019-cohort/)
 - Achieved meaningful results by using k-means clustering and ggplot2, tidyr, and tibble to cluster Lassioglassum malachurum by locomotor activity, providing biologists with an automated categorization of large scale bee experiments that replaced manual sorting.
 - Assisted in writing contributions to supervisor’s thesis, presented weekly to colleagues, and created blog posts to document lab procedures; effectively communicating research findings to a variety of audiences.
 ## PROJECTS
