@@ -1,5 +1,5 @@
 +++
-title = "Winning 2nd place at MLOPS LLM Hackathon: Don't let your dreams be dreams!"
+title = "Winning 2nd place at MLOPS LLM Hackathon: Question & Answer for MLOps System"
 author = "Alejandro Armas"
 tags = ["Programming"] 
 date = 2023-06-07
@@ -52,7 +52,7 @@ The work that I primarily contributed to was the LLM pipeline for Question and A
 
 The way I like to think of this data structure, is that it is similar to a B-Tree, except the partitioning is done by segregating disjoint subspaces within the embedding vector space. The reason for this, is that this embedding data is represented in the program's memory (i.e. Redis internally), so it helps to have spatial locality. A little bit of math goes a long way! 
 
-In other words, you're often doing comparisons of embeddings that are geometrically close to one another, so why not have them nearby to one-another. See my post about [Vector Spaces here](/content/post/metric-space) to help paint this picture a bit more clear. Anyways, Walmart has a [pretty juicy blog post](https://medium.com/walmartglobaltech/scalable-semantic-search-s3-f403e0db5e9) about this, where they describe an internal library they created for vector search, if you would like more details.        
+In other words, you're often doing comparisons of embeddings that are geometrically close to one another, so why not have them nearby to one-another. See my post about [Vector Spaces here](/post/metric_space/) to help paint this picture a bit more clear. Anyways, Walmart has a [pretty juicy blog post](https://medium.com/walmartglobaltech/scalable-semantic-search-s3-f403e0db5e9) about this, where they describe an internal library they created for vector search, if you would like more details.        
 
 #### Creating Citations
 
