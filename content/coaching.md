@@ -24,6 +24,9 @@ I have a passion for simplifying complex concepts and guiding others through the
 
 ## Consultation
 
-To schedule a complimentary 15-minute consultation, select a slot at [cal.com/alejandroarmas](https://cal.com/alejandroarmas) and email me an introduction to:
-- armas < at > ucdavis < dot > edu 
-- titled:  "*Coaching Intro - YOUR NAME*"
+To schedule a complimentary 15-minute consultation:
+
+1. select a slot at [cal.com/alejandroarmas](https://cal.com/alejandroarmas)
+2. email me an introduction to:
+   - armas < at > ucdavis < dot > edu 
+   - titled:  "*Coaching Intro - YOUR NAME*"
