@@ -5,7 +5,7 @@ tags = "tags"
 theme = 'hugo-texify2'
 title="Armas.AI 👨🏽‍💻🇲🇽"
 description = "Come visit and learn with me new topics in Engineering and Artificial Intelligence!"
-images = ['images/logo.jpg']
+images = ['images/site/favicon/website_icon.jpg']
 footnote = """
   Follow me on <a class=link href=https://github.com/alejandroarmas target=_blank rel=noopener>GitHub</a>,
   <a class=link href=https://www.linkedin.com/in/armasalejandro/ target=_blank rel=noopener>LinkedIn</a> or
@@ -43,18 +43,24 @@ name = "Archive"
 url = "/post/"
 weight = 2
 
+
+[[menu.main]]
+identifier = "coaching"
+name = "Coaching"
+url = "/consulting/"
+weight = 3
+
 [[menu.main]]
 identifier = "about"
 name = "About"
 url = "/about/"
-weight = 3
-
+weight = 4
 
 [[menu.main]]
 identifier = "resume"
 name = "Resume"
 url = "/resume/"
-weight = 3
+weight = 5
 
 [params.sharingbuttons]
 facebook = false
