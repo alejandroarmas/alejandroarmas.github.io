@@ -93,3 +93,23 @@ four different branch predictors and varied saturation bits over six workloads t
 
 **Libraries:** NumPy, PyTorch, Pandas, Matplotlib, OpenCilk, doctest, Catch2, RapidJSON, Acme, Reverb, Gym
 
+
+### Honors and Achievements
+**Professional Memberships**:
+- Scholar, NSF LSAMP/CAMP program at UC Davis 		(June 2021 - 2022)
+- Scholar, AvenueE - VIP Research Program 			(June 2021 - 2022)
+- Member, Artificial Intelligence Society at UC Davis 		(Jan 2020 - Jan 2021)
+- Member, NSF LSAMP/CAMP program at UC Davis 		(Dec 2019 - June 2021)
+- Member, UC Davis AvenueE 2019 Cohort (1 of 30 students) 	(Sept 2019 - 2022)
+- Member, Institute of Electrical and Electronics Engineers (IEEE)
+
+**Awards, Grants and Fellowships**:
+- UC Davis ECE Undergraduate Travel Grant ($500)
+- AvenueE Travel Grant ($500)
+- ABRCMS Student Travel Award ($685.57)
+- UC Davis AvenueE Scholarship ($10500)
+- EOPS Perpetual Spirit Scholarship ($1000)
+- LMC Academic Competition scholarship ($500)
+- AvenueE Scholar Award ($1000)
+- LMC Academic Honors Spring 2019
+- LMC Dean's List 2017-2019
