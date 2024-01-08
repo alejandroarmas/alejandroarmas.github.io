@@ -1,16 +1,28 @@
 +++
-title = "Driving a Data Product"
-author = "Alejandro Armas"
+title = "Driving a Data Product - Uncovering Insights and Laying out Assumptions with Exploratory Data Analysis"
+author = ["Alejandro Armas", "Sachin"]
 tags = ["Programming", "Data Engineering"] 
 date = 2023-10-30
 +++
 
 
-> The hobby project I am working on, involves developing streaming workloads. [Sachin](https://www.linkedin.com/in/sachin-loecher) and [I](https://www.linkedin.com/in/armasalejandro/) have the goal to process realtime data and support real-time traffic prediction! However, before I was able to begin with that. I had to demonstrate the viability of this initative. It was critical to communicate and achieve consensus on my understanding of the data with my teammates. In addition to learning about the data, I testing hypothesis I had and laying out the assumptions I had. What followed, was a set of requirements for a subsequent predictive system.  
+> [Alejandro Armas](https://www.linkedin.com/in/armasalejandro/) and [Sachin Loechler](https://www.linkedin.com/in/sachin-loecher) have been hard at work on a project that involves developing streaming workloads. 
+
+The project has the goal to process realtime data and support real-time traffic prediction! However, before I was able to begin with that. I had to demonstrate the viability of this initative. It was critical to communicate and achieve consensus on my understanding of the data with the team. In addition to learning about the data, I testing hypothesis I had and laying out the assumptions I had. What followed, was a set of requirements for a subsequent predictive system.  
+
 
 ##### Why this Project Brings Value?
 
 According to the INRIX 2022 Global Traffic Report, traffic congestion cost the US more than $81 billion in that year alone. In San Fransisco, drivers lose on average 97 hours a year due to traffic congestion. By “extra hours” they mean the extra time spent traveling at congested speeds rather than free-flow speeds. 
+
+
+##### Why Invest time into Data Analysis?
+
+
+There is a large shift and amount of complexity introduced to the Machine Learning System in order to make it fully MLOPS driven.   
+- This complexity is usually hard to justify as time and money investments would be substantial.  
+
+Full fledged MLOps transformation is not guaranteed to bring your business a positive ROI and most certainly not in a short term. [When Jeff Bezos speaks about one way door decisions and two way door decisions](https://www.youtube.com/watch?v=vga3PeQlRs4) this project comes to mind. There is a lot of complexity to building this system, so the more upfront investment into understanding data and its limitations, the faster it is to know its not possible or the easier it is to actually plan ahead and expidite the development process.  
 
 # Lessons Learned from Data
 
