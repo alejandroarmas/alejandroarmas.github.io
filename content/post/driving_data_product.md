@@ -204,15 +204,17 @@ An example of this approach was employed, but very quickly the predicted tracks'
 
 Qualitatively, it appears that for about 4 seconds, the `predicted tracks` follow vehicles for most frames, but quickly vanish afterwards (i.e. go out of frame). We can imagine that for faster vehicles, we would have to decrease this ceiling. **Perhaps a 2s track time would be a minimum**. Here is the original video footage:
 
+{{< figure src="https://i.imgur.com/zGsCOuy.mp4" alt="CCTV Elevation Distribution">}}
 
-{{< youtube HzfJn6DgjSY >}}
 
 
 ##### Image Tracking Quality Goes Up as the Window Length Decreases
 
 Here we employ another scenario. We are tracking objects over a 2s window. This time we apply the image segmentation pipeline onto 5 frames, spaced 2 seconds apart, and repeat for 5 smaller clips into co-tracker to obtain 5 `predicted tracks`, each with a duration of 2s. It looks far more accurate at the cost of performance.
 
-{{< youtube Lu_FvO21BVk >}}
+
+{{< figure src="https://i.imgur.com/TbRrIaI.mp4" alt="Labeled Sign">}}
+
 
 ##### Co-Tracker Performance
 
