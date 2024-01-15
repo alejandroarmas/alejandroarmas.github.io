@@ -126,15 +126,14 @@ The embeddings are adjusted according to the context and the task of the Transfo
 
 #### Architecture Details
 
-Now before we dive deeper into the post, I want to give you an idea of the architectural choices in [Attention Is All You Need](https:\\arxiv.org/abs/1706.03762) versus the simplified example my blogpost showcases
+Now before we dive deeper into the post, I want to give you an idea of the architectural choices in [Attention Is All You Need]("https:\\arxiv.org/abs/1706.03762") versus the simplified example my blogpost showcases
 
-- Embedding dimension: 512 (4 in our example)
-- Number of encoders: 6 (2 in our example)
-- Number of decoders: 6 (2 in our example)
-- Feed-forward dimension: 2048 (8 in our example)
-- Number of attention heads: 8 (2 in our example)
-- Attention dimension: 64 (3 in our example)
-
+- Embedding dimension {{< katex "d_{\text{model}} = 512" true />}}: (4 in our example)
+- Number of encoders {{< katex "N = 6" true />}}:(2 in our example)
+- Number of decoders {{< katex "N = 6" true />}}: (2 in our example)
+- Feed-forward dimension {{< katex "d_{\text{ff}} = 2048" true />}}: (8 in our example)
+- Number of attention heads {{< katex "h = 8" true />}}: (2 in our example)
+- Attention dimension {{< katex "d_{\text{k}} = 64" true />}}: (4 in our example)
 
 
 ## Positional Encoding
@@ -168,10 +167,12 @@ The word embedding space captures the semantic meanings learned during the train
 
 ### Positional Encoding Formula
 
-![[Pasted image 20231228172414.png]]
-> 512-dimensional positional encoding. The maximum phrase of 100 words is represented by its unique row, denoting a positional encoding  {{< katex "\vec{p_t}" true />}} .
 
-Let  {{< katex "t" true />}}  be the desired position in an input sentence,  {{< katex "\vec{p_t} \in \mathbb{R}^d" true />}}  be the positional encoding, and  {{< katex "d" true />}}  be the encoding dimension (where  {{< katex "d \equiv_2 0" true />}} ). That is,  {{< katex "d" true />}}  is an even number. Then,  {{< katex "PE : \mathbb{N} \to \mathbb{R}^d" true />}}  will be the function that produces the corresponding encoding. Here is the formula for the dimension  {{< katex "i \in \{1, 2, \cdots, d\}" true />}} : [Source](https:\\kazemnejad.com/blog/transformer_architecture_positional_encoding/)
+{{< figure src="/posts/transformer/positional_encoding_figure.png" alt="Graph of Traffic Speeds">}}
+
+> Here we have a 512-dimensional positional encoding. The maximum sequence length of 100 tokens is represented by the number of rows, denoting a single positional encoding  {{< katex "\vec{p_t}" true />}}.
+
+Let  {{< katex "t" true />}}  be the desired position in an input sentence,  {{< katex "\vec{p_t} \in \mathbb{R}^d" true />}}  be the positional encoding, and  {{< katex "d" true />}}  be the encoding dimension (where  {{< katex "d \equiv_2 0" true />}} ). That is,  {{< katex "d" true />}}  is an even number. Then,  {{< katex "PE : \mathbb{N} \to \mathbb{R}^d" true />}}  will be the function that produces the corresponding encoding. Here is the formula for the dimension  {{< katex "i \in \{1, 2, \cdots, d\}" true />}} : [Source]("https:\\kazemnejad.com/blog/transformer_architecture_positional_encoding/")
 
  {{< katex >}}
 \vec{p_t}^{(i)} = PE(t)^{(i)}  := \begin{cases} \sin(\omega_i t) \text{, if } i \equiv_2 0 \\ \cos(\omega_i t)  \text{, otherwise } \end{cases}
@@ -688,7 +689,7 @@ This provides us the output of one of the attention heads. Now we must concatena
 The first linear transformation is done to expand the dimensionality of the input. It represents a per-token processing. Sort of like thinking about each token, after it has processed its relationship with all the other tokens in the sequence. 
 
 
-For example, if the input dimension is 512, the output dimension might be 2048. In our simple of example with dimension of 4, we’ll expand to 8.
+For example, if the input dimension {{< katex "d_{\text{model}} = 512" true />}}, the output dimension might be {{< katex "d_{\text{ff}} = 2048" true />}}. In our simple of example with dimension of {{< katex "d_{\text{model}} = 4" true />}}, we’ll expand to {{< katex "d_{\text{ff}} = 8" true />}}, before we finally shrink back down to {{< katex "d_{\text{model}} = 4" true />}}.
 
 > **ReLU activation:** This is a non-linear activation function. It’s a simple function that returns 0 if the input is negative, and the input if it’s positive. This allows the model to learn non-linear functions. The math is as follows:
 >  {{< katex >}} \text{ReLU}(x)= \max(0,x) {{< /katex >}}
@@ -697,6 +698,15 @@ For example, if the input dimension is 512, the output dimension might be 2048. 
 
 The second linear transformation reduces the dimensionality back to the original dimension. In our example, we’ll reduce from 8 to 4.
 
+{{< katex >}}
+
+\begin{aligned}
+
+\text{FFN}(x)= \max \left( 0, \vec{x}\bf{W}_1 + \vec{x}_1 \right)\bf{W}_2 + \vec{x}_2 
+
+\end{aligned}
+
+{{< /katex >}}
 
 
 ## Decoder
@@ -704,57 +714,31 @@ The second linear transformation reduces the dimensionality back to the original
 The "Attention is All You Need" paper concerns itself with machine translation. That is converting a sequence from one language to another. For example, `"Hello World, this is Alejandro!` is translated into `"Hola Mundo, soy Alejandro!`
 
 
-The decoder utilizes Self-Attention in two places:
+The Decoder utilizes Self-Attention in two places:
 1. Masked Self-Attention for calculating the affinity of the output generation with itself
 2. Encoder-Decoder Self-Attention for calculating the affinity of the output generation with the output representation of the Encoder
-
-### Generating a Sequence
-
-Usually, the output is a probability distribution of the next token/word that comes after the prompt.
-
-```python
-for _ in range(max_new_tokens):
-    # 1. Have sequence abide by a certain length 
-    # 2. Input sequence and get next token prediction distribution
-    # 3. Sample from said distribution
-    # 4. Append new token to sequence 
-```
-
-
-```python
-# idx is (B, T) array of indices in the current context
-for _ in range(max_new_tokens):
-   # crop idx to the last block_size tokens
-   idx_cond = idx[:, -block_size:]
-   # get the predictions
-   logits, loss = Transformer.predict(idx_cond)
-   # focus only on the last time step
-   logits = logits[:, -1, :] # becomes (B, C)
-   # apply softmax to get probabilities
-   probs = F.softmax(logits, dim=-1) # (B, C)
-   # sample from the distribution
-   idx_next = torch.multinomial(probs, num_samples=1) # (B, 1)
-   # append sampled index to the running sequence
-   idx = torch.cat((idx, idx_next), dim=1) # (B, T+1)
-```
-
 
 ### Masked-Multi-Head Self-Attention
 
 
 > 💡 **BIG IDEA:** This self-attention layer, is for **calculating the affinity of the output sequence with itself**. 
 > 
-> (i.e. it uses the self-attention computation to understand the relevance and importance of all the words that have been generated thus far and their relationship to one another) 
+
+In other words, the Masked Attention Layer uses the self-attention computation to understand the relevance and importance of all the words that have been generated thus far and their relationship to one another.
 
 {{< figure src="/posts/transformer/masked-attention.png" alt="Graph of Traffic Speeds">}}
 
-As we've previously seen, the first sublayer receives the previous output of the decoder stack, adds positional information, and implements a masked multi-head self-attention mechanism. This matrix, representing the tokens of the already outputed generation sequence, are transformed into **Q**, **K**, and **V** matricies. Where this differs from regular self-attention, seen in the encoder, is that we would like our attention scores to independently reflect the fact that some tokens have no awareness of what generation actually followed. 
+Just as we've previously in the Self-Attention attention mechanism within the Encoder, the Decoder's first sublayer applies adds positional information to embeddings, and then follows up with a masked multi-head self-attention mechanism. The embeddings however, are applied to generated data instead of an input. This matrix, representing the tokens of the already outputed generation sequence, is transformed into **Q**, **K**, and **V** matricies. 
+
+Where the Masked-Self Attention differs from Self-Attention, as seen in the encoder, is that we would like our attention scores to independently reflect the fact that some tokens have no awareness of what generation actually followed. 
 
 **Masked Self-attention:** is the mechanism that ensures the decoder only attends to the preceding words in the sequence. This means we mask the tokens that have not been generated yet. 
 
 > 💡 **BIG IDEA:** The mask is simulating an autoregressive generation process within the Decoder.
 
 {{< figure src="/posts/transformer/masked-attention-graph.png" alt="Graph of Traffic Speeds">}}
+> Figure X. This example generated sequence `"Hola Mundo, soy Alejandro!"` illustrates how raw attention scores are derived from the relationship of each token to eachother.
+
 
 We can think of attention as a communication mechanism, where each edge within a directed graph is the raw attention value between Q and V. In the figure, the token `"Hola"` only attends to itself with an attention of 17.04 because it represents an output generation of that word alone. However, once we get to the token `"Alejandro!"`, we have other preceding tokens attending to the attention scores.
 
@@ -897,10 +881,9 @@ The **Multi-Head Self-Attention** mechanism allows the model to focus on differe
 This output maintains information from various representation subspaces at different positions.
 
 
+Each head produces a matrix packed with context vectors, detailing the semantics of the sentence. They get concatanated together over this channel dimension.  Where {{< katex "\bf{W}_O \in \mathbb{R}^{h*d_v \times d_{\text{model}}}" true />}}. In our example, we have two heads (i.e. {{< katex "h = 2" true />}}), so {{< katex "\bf{W}_O \in \mathbb{R}^{10 \times 5}" true />}}.
 
-
-Each head produces a matrix packed with context vectors, detailing the semantics of the sentence. They get concatanated together over this channel dimension.  
-
+The authors make sure to have {{< katex "d_k = d_v = \frac{d_{\text{model}}}{h}" true />}}. 
 
 {{< katex >}}
 \begin{aligned}\hspace{1em}
@@ -909,13 +892,13 @@ Each head produces a matrix packed with context vectors, detailing the semantics
 
 \\&= 
 
-\text{Concat} \left ( \text{head}_i, \cdots , \text{head}_h \right) \bf{W}_O
+\text{Concat} \left ( \text{head}_i, \cdots , \text{head}_{h - 1} \right) \bf{W}_O
 
 \\&=
 
 \text{Concat} \left ( 
 \text{softmax} \left ( \frac{\bf{Q}_i\bf{K}^T_i}{\sqrt{d_k}} \right) \bf{V}_i , \cdots , 
-\text{softmax} \left ( \frac{\bf{Q}_h\bf{K}^T_h}{\sqrt{d_k}} \right) \bf{V}_h \right) \bf{W}_O
+\text{softmax} \left ( \frac{\bf{Q}_h\bf{K}^T_{h - 1}}{\sqrt{d_k}} \right) \bf{V}_{h - 1} \right) \bf{W}_O
 
 
 \\&=
@@ -991,29 +974,23 @@ logits = self.lm_head(x) # (B,T,vocab_size)
 ## Optimization Problems with Deep Neural Networks
 
 
-Deep Neural Networks suffer from optimization issues. 
-
-> **Gradient Explosion:** is when small changes in the input of early layers end up being amplified in later layers.
-> Two common techniques to mitigate this problem are residual connections and layer normalization
+Deep Neural Networks suffer from optimization issues. **Gradient Explosion:** is when small changes in the input of early layers end up being amplified in later layers. The opposite of gradient explosion is **“gradient vanishing**, which occurs when the gradients become too small to be useful for learning. Two common techniques to mitigate this problem are residual connections and layer normalization. 
 
 ### Residials
 
-[Residial Connections (i.e. Skip connections)](https://arxiv.org/pdf/1512.03385.pdf)
+[Residial Connections (i.e. Skip connections)](https://arxiv.org/pdf/1512.03385.pdf) allow the gradient to move unimpeeded throughout the computational graph, during the backwards pass in optimization. We know that the gradient-descent algorithm induces juicy statistical signals, derived from training data, into the model weights during optimization. So if we imagined gradient-descent as fire, then we might imagine residual connections as lighter fluid. 
 
 {{< figure src="/posts/transformer/residual.png" alt="Graph of Traffic Speeds">}}
 
-The way it works is that you have a residual pathway that works as normal. Then you have another computation that is forked off and projected back onto the residual path via addition. The reason this is useful because addition distributes gradients equally. During the backwards pass in optimization, the gradient is induced unimpeeded throughout the computational graph.
-
+The way it works is that you have a residual pathway that works as normal. Then you have another computation that is forked off and projected back onto the residual path via addition. The reason this is useful because addition distributes gradients equally. 
 
 Each encoder (i.e. the self-attention and feedforward network) has a residual connection around it, and is followed by a [layer-normalization](https:\\arxiv.org/abs/1607.06450) step. 
 
 
 #### Layer Normalization
 
-It is [implemented in PyTorch](https:\\pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html). 
 
-
-The purpose of LayerNorm is to normalize the activations during the forward pass and their gradients during the backward pass. The normalization is unit-gaussian distribution over each row in the matrix (i.e. zero mean and standard deviation of one). In the context of transformers, it is usually performed in three places:
+The purpose of LayerNorm is to normalize the activations during the forward pass and their gradients during the backward pass. It is [implemented in PyTorch](https:\\pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html). The normalization is unit-gaussian distribution over each row in the matrix (i.e. zero mean and standard deviation of one). In the context of transformers, it is usually performed in three places:
 1. Applied immediately to the input prior to Multi-Head Attention Mechanism
 2. Applied to the output of the Multi-Head Attention Mechanism, but prior Multi-Layer Perceptron
 3. End of Transformer, but prior to last Linear Layer responsible for decoding tokens into the vocabulary
@@ -1058,6 +1035,5 @@ The purpose of LayerNorm is to normalize the activations during the forward pass
 \end{aligned}
  {{< /katex >}}
 
-The residuals provide an easy way for the gradient to propigate backwards. 
 
 
