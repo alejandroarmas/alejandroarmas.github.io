@@ -41,8 +41,8 @@ extend its toolkit and develop comprehensive core documentation, as evidenced by
 
 ### Traffic Prediction Service (Request Access for View) | May 2023 - Present
 **Tech: Ray, Docker, Terraform, DVC, S3, ONNX, Plotly**
-- Enabled reproducible data analysis by leveraging DVC to capture data lineage, provisioning both object storage and IAM
-policies using Terraform for secure access, optimizing network transfers by 35x and packaging notebooks via Docker
+- Enabled reproducible data analysis by leveraging DVC to capture data lineage, provisioning both object storage and IAM policies using Terraform for secure access, optimizing network transfers by 35x and packaging notebooks via Docker
+- Built data producers, serialized events and processed features to enable real-time traffic forecasting | PyFlink, Redpanda, Avro, Docker
 
 ### [some-dl-models](https://github.com/alejandroarmas/some-dl-models) | Jan 2023 - Apr 2023
 **Tech: PyTorch, comet ml, Poetry, ONNX, Github Actions**
