@@ -1,5 +1,5 @@
 +++
-title = "Winning 2nd place at MLOPS LLM Hackathon: Question & Answer for MLOps System"
+title = "Winning 3rd place at MLOPS LLM Hackathon: Question & Answer for MLOps System"
 author = "Alejandro Armas"
 tags = ["Programming"] 
 date = 2023-06-07
@@ -98,7 +98,7 @@ Take a look at a spreadsheet we submitted, containing [question and answer outpu
 ### Conclusion
 
 
-Overall, the hackathon was a fantastic experience, and I'm grateful for the opportunity to work with such a talented team. Thank you to our judges Chip Huyen, Daniel Svonava, Sam Partee, and Jacky Koh. One of the judges, I can't say which, told me it was so difficult choosing a winner in our track. With that said, I'm proud we were even selected to present in front of the esteemed judges, let alone going home with 2nd place. It was a great way to contribute to the MLOps community and explore new ideas and technologies. I look forward to future hackathons and continuing to build upon the success of this project!
+Overall, the hackathon was a fantastic experience, and I'm grateful for the opportunity to work with such a talented team. Thank you to our judges Chip Huyen, Daniel Svonava, Sam Partee, and Jacky Koh. One of the judges, I can't say which, told me it was so difficult choosing a winner in our track. With that said, I'm proud we were even selected to present in front of the esteemed judges, let alone going home with 3rd place. It was a great way to contribute to the MLOps community and explore new ideas and technologies. I look forward to future hackathons and continuing to build upon the success of this project!
 
 
 
