@@ -14,46 +14,39 @@ rootFontSize = "90%"
 ### Ground Software Engineer Intern | Aug 2022 – Nov 2022
 ##### [Astranis Space Technologies](https://www.astranis.com) | San Francisco, CA
 
--  Enhanced satellite comms by redesigning backend app, React frontend, and proprietary event processor. The
-modifications ensured idempotent writes into Elasticsearch, significantly reducing satellite noise for operators.
--  Improved the resiliency of Kubernetes deployments by re-engineering all software micro-services to pull configurations
-upon pod startup. This modification resulted in a reduction in system downtime, leading to more reliable operations
+- Improved low-latency microservice architecture, reducing satellite noise by 27%, leveraging customer centric mindset in redesign of the Flask backend, React front-end framework, and proprietary stream processor using Elasticsearch within agile team.
+- Proactively identified technical debt and resolving critical issues in Kubernetes deployments, enabling the system to recover and restart several minutes faster potentially preventing multi-million dollar satellite crashes.
 
 ### Software Developer Intern | Mar 2021 – Nov 2021
 ##### [Exploratory Systems Laboratory](https://resilientdb.com/#team) | Davis, CA
 
-- Enhanced the accessibility and usability of ResilientDB, our blockchain distributed system, by spearheading an initiative to
-extend its toolkit and develop comprehensive core documentation, as evidenced by 79 stars and 141 forks on GitHub.
-- Launched the [ExpoBlog](https://blog.resilientdb.com/about.html), hosting 22 insightful posts and reducing the on-boarding of colleagues from months to weeks.
-- Designed and developed RESTful API endpoints for decentralized application data store connectivity
+- Launched ResilientBlog to articulate technical challenges, reducing colleague onboarding time from months to weeks through the publication of 22 insightful blog posts on distributed (multi-tiered) systems. This initiative played a crucial role in the successful proposal for the Apache Incubator, evidenced by 108 stars and 192 forks — https://go.alejandroarmas.dev/tU0gVJi
 
 ### Research Scientist Intern | May 2020 - Aug 2020 
 ##### [Massachusetts Institute of Technology - Biology Summer Research Program](https://biology.mit.edu/program-details-bsg-msrp-bio/) | Remote, CA
--   Investigated the underpinnings which confer advantages to reinforcement learning algorithms; where learning a distribution of cumulative sum of discounted rewards, is advantageous to merely learning its expected value.
--   Implemented quantile regression loss function and back-propagation algorithms to learn underlying data distributions.
--   Trained Agents in OpenAI’s Gym Atari environments using Deepmind’s Acme and Reverb, connecting remotely through the OpenMind Computing Cluster to perform GPU accelerated workloads.
+- Contributed to ML research by deliverying presentation on state-of-the-art reinforcement learning algorithms that learned from reward distributions instead of expected values by reviewing academic literature, proving theorems, and implementing algorithms using Numpy and deep learning frameworks like PyTorch. — https://go.alejandroarmas.dev/UrXJtxv
 
 ### Intern - Interdisciplinary and Quantitative Biology REU |  Jun. 2019 - Aug. 2019 
 ##### [Universidad de Puerto Rico, Rio Piedras](https://iqbioreu.uprrp.edu/index.php/2019-cohort/) | San Juan, Puerto Rico
-- Achieved meaningful results by using k-means clustering and ggplot2, tidyr, and tibble to cluster Lassioglassum malachurum by locomotor activity, providing biologists with an automated categorization of large scale bee experiments that replaced manual sorting.
-- Assisted in writing contributions to supervisor’s thesis, presented weekly to colleagues, and created blog posts to document lab procedures; effectively communicating research findings to a variety of audiences.
+- Translated research needs of stakeholders into ML solution, by automating human categorization for large scale bee experiments, by leveraging statistical and experimental foundation using R, tidyr, and tibble
+- Communicated insights to key stakeholders by created visualizations with ggplot2. Poster presentation accepted at ABRCMS conference — https://go.alejandroarmas.dev/FUoMsov
 ## PROJECTS
 
 ### Traffic Prediction Service (Request Access for View) | May 2023 - Present
 **Tech: Ray, Docker, Terraform, DVC, S3, ONNX, Plotly**
-- Enabled reproducible data analysis by leveraging DVC to capture data lineage, provisioning both object storage and IAM policies using Terraform for secure access, optimizing network transfers by 35x and packaging notebooks via Docker
-- Built data producers, serialized events and processed features to enable real-time traffic forecasting | PyFlink, Redpanda, Avro, Docker
+- Developed a lineage-based cloud data storage solution to empower reproducible rigorous experimentation, improving data transmission speeds by 35x by leveraging DVC, docker-compose, and Parquet — https://go.alejandroarmas.dev/qKDhGU2
+- Identified and drove technical requirements insights for an online feature big-data architecture by deeply engaging with unstructured data using GroundingDINO, SAM, DPT, Plotly, OpenCV and CoTracker — https://go.alejandroarmas.dev/RXsjI5F
+- Built online ML feature pipeline and achieving a 8x scalable architecture using a message passing technology (Redpanda), with Avro serialization and creating features with Apache Flink in Java. Monitoring app through Prometheus and Grafana integration
+- Ensured strict data privacy by leveraging AWS IAM roles/policies, packaging dependencies using Poetry and Docker, and streamlining S3 deployment through Terraform and GitHub Actions — https://go.alejandroarmas.dev/LkQpB2H
 
 ### [some-dl-models](https://github.com/alejandroarmas/some-dl-models) | Jan 2023 - Apr 2023
 **Tech: PyTorch, comet ml, Poetry, ONNX, Github Actions**
--   Developed ML platform and integrated Comet ML to log training metrics and persist ONNX model artifacts, achieving an increased experimentation workflow.
-- Tested algorithms such as CNN, LSTM and GNN to achieve successful outcomes on CIFAR, Pubmed and Reddit datasets.
-- Enforced common development environment on local machines, using Poetry as a package manager and pre-commit hooks such as Black, Mypy, Flake8, unit testing and conventional commits, accelerating development feedback loops.
--   Streamlined the PR process by leveraging Github actions to automate linting, static analysis and unit-testing, resulting in improved code quality.
+- Trained models such as CNN, LSTM and GNN to achieve successful outcomes on CIFAR, Pubmed and Reddit datasets.
+- Drove operational excellence using strong foundation in coding for code quality; My efforts saved approximately 100 hours of productivity through automation with Poetry, static-analysis, unit-testing, and developing a CI/CD pipeline with GitHub Actions — https://go.alejandroarmas.dev/7hP863H
 
 ### [MLOPS Question + Answer Bot](https://alejandroarmas.github.io/post/sf-llm-stack-hackathon/) | Mar 2023 - Mar 2023
 **Tech: Relevence AI, Redis, OpenAI**
-- Developed a LLM pipeline for Q/A using Redis Vector Search, achieving 2nd place at MLOps.community LLM SF Hackathon
+- Developed a LLM pipeline for Q/A using Redis Vector Search, achieving 3rd place at MLOps.community LLM SF Hackathon
 
 ### [Automatic Differentiation Backpropagation Engine](https://github.com/alejandroarmas/Wirikuta) | Dec. 2021 - Jun. 2022
 **Tech: C++20, C++17, C++14, OpenCilk, doctest, Catch2**
@@ -75,10 +68,8 @@ four different branch predictors and varied saturation bits over six workloads t
 
 ### [Lineage-based Data Store](https://github.com/p3terlo/lstore_db) | Jan 2021 - Apr 2021
 **Tech: Python, Git**
--   Oversaw team of 5 programmers, partitioned responsibilities, led meeting agendas and oversaw implementation of multi-version hybrid OLTP/OLAP database management system with novel QueCC concurrency protocol.
--   Spearheaded performance critical development: in-memory record indexing and system memory management.
+- Designed and drove team project to implement cutting edge relational database from academic literature. Built in-memory record indexing and in-memory management, resulting in a Top 5 performance using Python — https://go.alejandroarmas.dev/E7wKir1
 -   Mediated system design for concurrency control, contention-free lazy record consolidation and data durability.
--   Demonstrated and encouraged use of version control, unit-testing and best coding practices.
 ## TECHNICAL SKILLS
 
 **Relevant Coursework:** 

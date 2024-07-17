@@ -11,9 +11,20 @@ author = "Alejandro Armas"
 
 ### Hey Whats Up! I'm Alejandro Armas
 
-I am a recent graduate at the *University of California, Davis* interested in building ML platforms (anything related to training, deploying, monitoring ML models or collecting/transforming big-data).
 
-> I hope that this blog can prove to be useful for helping others digest complicated topics. Furthermore, my intention to pursue leading industry roles and teaching, is to lead and advance this emerging field to become more inclusive, so we can develop more diverse participation in engineering with science education. If you'd like to see more of my professional experience (*or hire me*!), make sure to check out the [**Resume tab**](/resume/). This webpage is meant to show I am more than an academic in spite of how passionate I am of science. 
+I am a Machine Learning Engineer with a strong interest in infrastructure and platforms.
+
+When my parents were my age, they left a poor village in Mexico, so that I could be the first in my family to have a Bsc. in Computer Science at UC Davis. I have worked at four internships:
+
+1. My first was an NSF-funded REU in Puerto Rico, where I translated research needs of users into an ML solution. 
+2. Interning At MIT, I delved into cutting-edge ML algorithms, presenting my findings and leveraging frameworks like PyTorch.
+3. Next, I was at the ExpoLab working on a big-data architecture, where I reduced colleague onboarding time from months to weeks by creating the ExpoBlog. 
+4. At a startup backed by Andreessen Horowitz, my coding expertise contributed to enhancing software services and averting potential multi-million dollar satellite crashes. 
+5. Most recently, under the guidance of an industry leader with nine years of experience, I deployed and optimized cloud ML infrastructure by 35x. This enhancement enabled me to analyze datasets effectively, driving the design and construction of a real-time ML feature pipeline with monitoring capabilities. Consequentially I achieved a 8-fold increase in scalability, laying the groundwork for the eventual productization of the ML model.
+
+While my technical achievements are noteworthy, my true pride lies in honoring my mother’s legacy of hard work and support. As a mentor with Close The Gap, I extend that legacy, guiding underrepresented students toward fulfilling careers in tech.
+
+I am excited about the prospect of joining my next company, where I can merge my technical skills with a heartfelt commitment to building a safe, reliable, and inclusive data-driven product.
 
 
 Since you've gotten this far, I'm going to share in confidence my favorite equation:
@@ -27,7 +38,7 @@ $$
 
 I love going to the gym. It used to not be that way. In fact, the majority of my life I coped with food, due to the environment I grew up around. Then, I decided I wanted something different.
 
-Once I found the gym, my confidence grew tremendously. Now it is my lifestyle to become the healthiest version of myself. 
+Now it is my lifestyle to become the healthiest version of myself. 
 
 In fact, I used to weigh over 220lbs, now I weigh 170 🤩 I love talking gym and if you do, then hit me up!!
 
