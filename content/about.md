@@ -20,7 +20,7 @@ When my parents were my age, they left a poor village in Mexico, so that I could
 2. Interning At MIT, I delved into cutting-edge ML algorithms, presenting my findings and leveraging frameworks like PyTorch.
 3. Next, I was at the ExpoLab working on a big-data architecture, where I reduced colleague onboarding time from months to weeks by creating the ExpoBlog. 
 4. At a startup backed by Andreessen Horowitz, my coding expertise contributed to enhancing software services and averting potential multi-million dollar satellite crashes. 
-5. Most recently, under the guidance of an industry leader with nine years of experience, I deployed and optimized cloud ML infrastructure by 35x. This enhancement enabled me to analyze datasets effectively, driving the design and construction of a real-time ML feature pipeline with monitoring capabilities. Consequentially I achieved a 8-fold increase in scalability, laying the groundwork for the eventual productization of the ML model.
+5. Most recently, under the guidance of an industry leader with nine years of experience, I deployed and optimized cloud ML infrastructure by 35x. This enhancement enabled me to analyze datasets effectively, driving my design and construction of a real-time ML feature pipeline which efficiently processed 83K records/s with monitoring capabilities. My three contributions ultimately laying the groundwork for the eventual productization of an ML model.
 
 While my technical achievements are noteworthy, my true pride lies in honoring my mother’s legacy of hard work and support. As a mentor with Close The Gap, I extend that legacy, guiding underrepresented students toward fulfilling careers in tech.
 

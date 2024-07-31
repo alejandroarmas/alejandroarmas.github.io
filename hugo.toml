@@ -1,3 +1,4 @@
+baseURL = 'https://alejandroarmas.pages.dev'
 [taxonomies]
 tags = "tags"
 
