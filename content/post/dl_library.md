@@ -5,10 +5,18 @@ tags = ["Programming", "Mathematics"]
 date = 2021-05-05
 +++
 
+## Prerequisites
+
+You might be interested in my related articles on [Matrix Multiplication](/post/matrix_multiplication/) and [Concurrency](/post/concurrency/) before reading further! 
+
+## Introduction
 
 My goal for this project was to train a simple 2-layer Multi-layer perceptron by creating a Deep Learning Framework. 
 
-I gave myself the following restrictions:
+
+Typically representing models with a **Dynamic Acyclic Graph (DAG)** provides a better user debugging experience, so data and calculations had to flow at runtime. 
+
+So, I gave myself the following restrictions:
 1. Learn and incorporate as many design patterns and C++20 features as I could
 2. Use little to no dependencies in my code
 
@@ -53,27 +61,25 @@ This is what a sample training loop might look like with my library:
     }
 ```
 
+
 ### Results
 
 I demonstrated my network improving via it's loss function, but I wanted more! I saw that Matrix Multiplication represented the majority of the neural network computation's runtime, so I found it was critical to optimize.
 
-This project utilized parallel code via **OpenCilk**. It is a superset of C++ for parallel programming, hence the specialized compiler needed.
+This project utilized parallel code via **[OpenCilk](https://www.opencilk.org)**. It is a superset of C++ for parallel programming, hence the specialized compiler needed.
 
 Here I profiled the elapsed time for a 25M parameter operation: 
 
-[5000, 5000] x [5000, 5000] Parallel Matrix Multiply Benchmark: 6,831,126 ms.
-[5000, 1] x [5000, 1] Cross Entropy Metric Benchmark: 34 ms.
-[5000, 1] x [5000, 1] Outer Product Benchmark: 63,514 ms
-[5000, 1] x [5000, 1] Softmax Benchmark: 5 ms
-[5000, 1] x [5000, 1] Hadamard Product Benchmark: 21 ms.
-[10000, 9000] Matrix Transpose Benchmark: 659166ms improved to 66771 ms.
-
+| Operation                          | Data Size                     | Time (ms)                  |
+| ---------------------------------- | ----------------------------- | -------------------------- |
+| Parallel Matrix Multiply Benchmark | `[5000, 5000] x [5000, 5000]` | 6,831,126                  |
+| Cross Entropy Metric Benchmark     | `[5000, 1] x [5000, 1]`       | 34                         |
+| Outer Product Benchmark            | `[5000, 1] x [5000, 1]`       | 63,514                     |
+| Softmax Benchmark                  | `[5000, 1] x [5000, 1]`       | 5                          |
+| Hadamard Product Benchmark         | `[5000, 1] x [5000, 1]`       | 21                         |
+| Matrix Transpose Benchmark         | `[10000, 9000]`               | 659,166 improved to 66,771 |
 
 In the end, I achieved a 142x and 10x speedup on MM and transpose ops by implementing Parallel Divide and Conquer algorithms and representing matrices in row-major order for reduced cache misses.
-
-## Introduction
-
-Typically representing models with a dynamic acyclic graph (DAG) provides a better user debugging experience, so data and calculations had to flow at runtime. 
 
 ## Design
 
@@ -82,10 +88,18 @@ I did this by encapsulating data in tensors, which were instantiated with a fact
 - Each node contains a statically built finite state automata, used in tandem with traversal policies, such as gradient descent to update state. 
 - Additionally, iterator design patterns were used to decouple different traversal algorithms from the graph itself 
 
+## Debugging
+
+{{< figure src="/posts/wirikuta/nn_debugging.png" alt="IAM User Interaction" caption="Figure 1: Terminal Output Demonstrated Order of Operations: To show me the way, print statements indicated that ReLU came before addition, which came before a Matrix Multiplication and so forth" class="figure-container">}}
+
+Just to add my own two cents to the build versus buy argument... planning ahead and choosing a mature library with linear algebra primitives would have been a smart choice for sure. It was pretty tough debugging large input matricies.  
+
+ 
 ## Conclusion
 
 This project came at a very personal time in my life. A lot of uncertainty was going on with my family, but I woke up every day programming to keep me going. I learned so much and used these learnings as I prepared for my next internship. 
 
+- Here's a link to the repository if you're interested: [https://github.com/alejandroarmas/Wirikuta](https://github.com/alejandroarmas/Wirikuta)
 
 <!-- ### Chain Rule
 
