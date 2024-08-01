@@ -90,9 +90,10 @@ I did this by encapsulating data in tensors, which were instantiated with a fact
 
 ## Debugging
 
+Just to add my own two cents to the build versus buy argument... planning ahead and choosing a mature library with linear algebra primitives would have been a smart choice for sure. It was pretty tough debugging large input matricies. 
+ 
 {{< figure src="/posts/wirikuta/nn_debugging.png" alt="IAM User Interaction" caption="Figure 1: Terminal Output Demonstrated Order of Operations: To show me the way, print statements indicated that ReLU came before addition, which came before a Matrix Multiplication and so forth" class="figure-container">}}
 
-Just to add my own two cents to the build versus buy argument... planning ahead and choosing a mature library with linear algebra primitives would have been a smart choice for sure. It was pretty tough debugging large input matricies.  
 
  
 ## Conclusion
