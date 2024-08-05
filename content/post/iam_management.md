@@ -6,16 +6,30 @@ date = 2023-10-30
 +++
 
 
+# Introduction    
 
-## Identity Access Management (IAM)
+In this post, I will explain how I streamlined team decision-making by building a cloud experimentation solution, secured by AWS IAM roles/policies, then optimized dataset network transmissions by **35x** 
 
 In this post, we will explore how to leverage Terraform, a popular Infrastructure as Code (IaC) tool, to automate the setup and management of AWS IAM. We will walk through creating IAM roles, policies, and users, and demonstrating how to attach policies to these entities.
 
+I prioritized building this tool, because a streamlined process was critical for Sachin and I to achieve consensus on datasets and features for a ML model. Exploratory Data Analysis is a process driven very different from software engineering. It involves lots of trial and error, so reproducibility was top of mind.
 
-### Teammate Usage
+# Requirements
+
+Recall the requirements in Part 1 of this blog post series.
+
+| Requirements    | Motivation                                                                                                                                                                                     |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Security        | I wanted measures that protected sensitive data with authentication and access control privileges                                                                                              |
+
+
+# Design: Identity Access Management (IAM)
+
 
 {{< figure src="/posts/reproducible_notebook/iam_user_interaction.png" alt="IAM User Interaction" caption="Figure 2: IAM User Interaction." class="figure-container">}}
 
+
+## Usage for Users
 
 There are two AWS accounts. One is for an admin. 
 
@@ -29,7 +43,6 @@ You have been assigned an IAM user account. It contains a basic permission to ac
 	- `nick_brown_certified_wizard`
 
 {{< figure src="/posts/reproducible_notebook/aws_console_login.png" alt="Reproducible Notebooks">}}
-
 
 
 After being issued a temporary password, the user then is prompted to choose their own password.
@@ -72,7 +85,7 @@ Once you are able to configure this identity, you will be authorized to access t
 
 ```bash
 [cloudshell-user@ip-10-2-167-144 ~]$ export AWS_ACCESS_KEY_ID=ASIA2V5UQWDB66AX7MFK
-[cloudshell-user@ip-10-2-167-144 ~]$ export AWS_SECRET_ACCESS_KEY=18Mw4HhO1dRPVPILoWjysAqTd5hGzf+SG92t/3kT
+[cloudshell-user@ip-10-2-167-144 ~]$ export AWS_SECRET_ACCESS_KEY=18Mw4HNOTREALPILoWjysAqTd5hGzf+SG92t/3kT
 [cloudshell-user@ip-10-2-167-144 ~]$ export AWS_SESSION_TOKEN=IQoJb3JpZ2luX2VjEH4aCXVzLWVhc3QtMSJGMEQCIE6MvVVxoVsRNz8o1wd7Zc3dglTm144ij0sX4gPE6FO5AiAweGMRZ0JTB0g2r99b97/DeyO1A6Xtg82pwHaH/zWxLCqsAggnEAAaDDczNDI4MTExNzg5MSIML8GREa7z8h2wK7zdKokCCDEI/Sim/RJCO5hx9biflV1TpIdLfXMKQ6/cZAlpw9Mtu51ArgOQ8/1R7c0pwOsQumoMM+2gabJriGLxHtbCCeZL52kJ63OjREaGz/+dKxXjE86guEzliKy8uVfgNFRCmllj/a2LD840L9mkbrbZ8lKNNiOxmJbV4GwMYAUpAjugHj0rbyNBvIat9I+BOqm0VldUfRpicH/ip5jag4/ksY2l8Vk99+5zYfyL4A735vw+t4yFc457jR60pl5FKJUqOmkXOJKeu8wb78iUYJ7uOxCGykRupYtPRiWSsD4sW0Ljp8idyT9LQmac9QASK1mwmCQcGYrDu+zlwzvTij5tf1ovt21U0KQ5NDC/pLKmBjqeAZzpYZix3jliFhdQAKCeGy4WjW/3wXFmcDJ1PhfDbuzRA/y3JaWt1IgqeE/V3VqtmASCCdwpbNm1LOJtp34CDTDYkUcTamumKuaGuqK/UyO+ns9LNC4BmGVp3KNhancInI6DBeWoE1ZoUIPnMJrxR9VJH0RrmRZohGznn1DnyiStuiHpbvpdrR/JUllmG8NmvUHFyma3WIo+L7lFqhLO
 
 [cloudshell-user@ip-10-2-167-144 ~]$ aws s3 ls dvc-storage-tplzomcqordb
@@ -80,8 +93,7 @@ PRE files/
 ```
 
 
-### Implementation
-
+# Design
 
 1. We have a policy `aws_iam_policy` for issued identities `aws_iam_user` for new-joiners.
 2. The `aws_iam_policy` authorizes people to assume a new role `aws_iam_role`. This is for developers.
@@ -199,4 +211,9 @@ resource "aws_iam_role_policy" "team_developer_policy" {
   policy = data.aws_iam_policy_document.bucket_permissions_policy_document.json
 }
 ```
+
+
+# Conclusion
+
+By leveraging AWS IAM roles and policies, we ensured that our cloud experimentation solution was both secure and compliant with best practices. This robust security framework not only protected sensitive data but also facilitated a streamlined decision-making process by enabling controlled access to critical resources. Ultimately, this contributed to the overall goal of enhancing reproducibility and efficiency in our Exploratory Data Analysis workflows.
 
