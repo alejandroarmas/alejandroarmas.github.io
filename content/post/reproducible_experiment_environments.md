@@ -6,16 +6,36 @@ date = 2023-10-30
 +++
 
 
-This post is going to detail how I enabled reproducible environments
+# Introduction    
 
-- Reproducible Docker Builds
-- Optimizing Data Transfers
-
-Enabled reproducible data analysis by leveraging DVC to capture data lineage, provisioning both object storage and IAM policies using Terraform for secure access, optimizing network transfers by 35x and packaging notebooks via Docker
+In this post, I will explain how I streamlined team decision-making by building a cloud experimentation solution, secured by AWS IAM roles/policies, then optimized dataset network transmissions by **35x** 
 
 
-In this figure, the developer utilizes four main command line tools: DVC, Git, Poetry and Docker. DVC is configured to pull and push dataset artifacts onto the DVC repository. 
+I prioritized building this tool, because a streamlined process was critical for Sachin and I to achieve consensus on datasets and features for a ML model. Exploratory Data Analysis is a process driven very different from software engineering. It involves lots of trial and error, so reproducibility was top of mind.
 
+# Requirements
+
+## Non-Functional
+
+| Requirement                                    | Motivation                                                                                             |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Use the Python REPL (Read-Eval-Print Loop)<br> | Immediate feedback when running code                                                                   |
+| Reproduce Analysis on Different Machines       | Collaborators get to focus on experimentation, instead of being burdened with figuring out errors      |
+| Differentiate between Dataset Versions         | Data is not a static entity, so it is critical to distinguish our understanding of it at current times |
+| Export Results                                 | Collaboration requires sharing 😊                                                                      |
+| Visualizations                                 | EDA requires lots of graphs like histograms, scatter plots and more!                                   |
+
+
+## Functional
+
+| Requirements    | Motivation                                                                                                                                                                                     |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Performance     | Tool should handle experimentation without significant lag                                                                                                                                     |
+| Integration     | It was important to have the capability to integrate with common tools like Docker, Jupyter Notebooks, python libraries and cloud resources like AWS because those tools/platforms were mature |
+| Customizability | I wanted to provide users with the flexibility to choose python dependencies that are needed for their use case                                                                                |
+| Security        | I wanted measures that protected sensitive data with authentication and access control privileges                                                                                              |
+
+# Design
 
 ## Docker Build Flow
 
@@ -24,10 +44,6 @@ In this figure, the developer utilizes four main command line tools: DVC, Git, P
 An interesting use case for Docker is for packaging and running Jupyter Notebook Environments.
 
 That is, we can use Docker to commit the image to an artifact store, save the notebook as is and anyone within your organization can pull that down and run it. This is a massive boost for sharing and reproducing scientific experimentations. In the case of a Data team, this empowers individual contributers get feedback quicker and for teams to move understanding up the chain of the organization.  
-
-organization on docker, to push images. hands on docker. link on notion. 
-
-git-lfs or datasets. s3 location to sync a dataset down. dvc is another option for tooling. 
 
 
 ### Reproducible Experimentation Environment Design
@@ -58,7 +74,6 @@ Using Docker, I packaged the environment with a Docker Multi-Stage build. Additi
 
 
 {{< figure src="/posts/reproducible_notebook/notebook_workflow_build.png" alt="Reproducible Notebooks">}}
-
 
 The non-functional design requirement was to decouple the Poetry dependencies into a seperate base image called `alejandroarmas/jupyter-poetry-base:latest`. The base image would provide the tooling required for installing python packages (ex. curl and poetry) and would be seperate from the final image. 
 
@@ -180,8 +195,9 @@ The reason this is written in a seperate file `.github/actions/ACTION_NAME/actio
 
 We utilize a caching mechanism to significantly speed up the build process. The `cache-to` option tells Docker where to store the layers after they have been build. On the other hand, `cache-from` tells Docker where to look for layers, when building new versions of the image. If the specified cache exists, Docker will use those layers instead of rebuilding them. In this case, both options are set to `type=gha`, indicating that the cache should be stored in the GitHub Actions cache.
 
-## Data Transmission and Compression
+## Increasing Productivity by Improving Data Transmission and Compression
 
+Network speeds were becoming a bit bottleneck.
 
 Recall that I made the design decision to decouple the data from the docker image. Since the data was not embedded inside of a Docker build layer, it was instead expected to be on the host's filesystem. 
 
@@ -259,9 +275,9 @@ Apache Arrow and Apache Parquet both have different design goals. While Arrow is
 ) that guided my decision making.
 
 
-#### Performing Data Compression
+#### Optimizing Productivity by Performing Data Compression
 
-I removed some of the unused columns which resulted in a 32x decrease in size for PeMS monitoring data and a 38x decrease in size for climate data. 
+ I removed some of the unused columns which resulted in a 32x decrease in size for PeMS monitoring data and a 38x decrease in size for climate data. 
 
 
 ```bash
@@ -294,5 +310,9 @@ Creating a Dockerized environment for Jupyter Notebooks provides a consistent an
 
 Docker is used to build the Jupyter server environment image, which can be committed to an artifact store such as DockerHub, allowing anyone within an organization to pull it down and run it. This approach significantly boosts the sharing and reproducing of scientific experiments, leading to quicker feedback and improved understanding within teams. DVC enables one to download data artifacts, hosted on S3, and Docker Compose for mounting the file system into the running container for quick iteration. The use of GitHub Workflow automation streamlines this process.
 
-The next part of this blog post concerns itself with data governance. That is setting up identities and authentication, in order to allow certain users the priveledge of working with the data. Go ahead and check out Part 2 where I explain how I set up [Identity Access Management (IAM) on AWS using Terraform](/post/iam_management/).
+## Next Steps
+
+The next part of this blog post concerns itself with data governance. That is setting up identities and authentication, in order to allow certain users the priveledge of working with the data. 
+
+Go ahead and check out Part 2 where I explain how I integrate [Identity Access Management (IAM) on AWS using Terraform](/post/iam_management/) with this experimentation solution.
 
