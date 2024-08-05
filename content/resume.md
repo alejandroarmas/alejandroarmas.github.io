@@ -20,7 +20,7 @@ rootFontSize = "90%"
 ### Software Developer Intern | Mar 2021 – Nov 2021
 ##### [Exploratory Systems Laboratory](https://resilientdb.com/#team) | Davis, CA
 
-- Launched ResilientBlog to articulate technical challenges, reducing colleague onboarding time from months to weeks through the publication of 22 insightful blog posts on distributed (multi-tiered) systems. This initiative played a crucial role in the successful proposal for the Apache Incubator, evidenced by 108 stars and 192 forks — https://go.alejandroarmas.dev/tU0gVJi
+- Created the ResilientBlog and authored the first 6 out of 33 articles on distributed systems, which reduced colleague onboarding time from months to weeks. My efforts were pivotal during the Apache incubation process and resulted in ResilientDB receiving **112 stars** and **196 forks** — https://go.alejandroarmas.dev/tU0gVJi
 
 ### Research Scientist Intern | May 2020 - Aug 2020 
 ##### [Massachusetts Institute of Technology - Biology Summer Research Program](https://biology.mit.edu/program-details-bsg-msrp-bio/) | Remote, CA
@@ -28,29 +28,27 @@ rootFontSize = "90%"
 
 ### Intern - Interdisciplinary and Quantitative Biology REU |  Jun. 2019 - Aug. 2019 
 ##### [Universidad de Puerto Rico, Rio Piedras](https://iqbioreu.uprrp.edu/index.php/2019-cohort/) | San Juan, Puerto Rico
-- Translated research needs of stakeholders into ML solution, by automating human categorization for large scale bee experiments, by leveraging statistical and experimental foundation using R, tidyr, and tibble
-- Communicated insights to key stakeholders by created visualizations with ggplot2. Poster presentation accepted at ABRCMS conference — https://go.alejandroarmas.dev/FUoMsov
+- Automated human categorization of bee experiments with k-means clustering solution using R, tidyr, and tibble
+- Communicated weekly to **20+** stakeholders representing 4 teams by creating visualizations with ggplot2. Findings accepted at ABRCMS conference— https://go.alejandroarmas.dev/FUoMsov
 ## PROJECTS
 
 ### Traffic Prediction Service (Request Access for View) | May 2023 - Present
 **Tech: Ray, Docker, Terraform, DVC, S3, ONNX, Plotly**
-- Developed a lineage-based cloud data storage solution to empower reproducible rigorous experimentation, improving data transmission speeds by 35x by leveraging DVC, docker-compose, and Parquet — https://go.alejandroarmas.dev/qKDhGU2
+- Streamlined team decision-making by building a cloud experimentation solution, secured by AWS IAM roles/policies, then optimized dataset network transmissions by **35x** leveraging DVC, S3, Docker, Terraform, Poetry and Parquet — go.alejandroarmas.dev/qKDhGU2, go.alejandroarmas.dev/LkQpB2H
+- Improved ML model by reducing feature latency from 36 hours to 30-seconds by building a pipeline processing **83K** records/s with Apache Flink, then reduced storage by **70%** using serialization and compaction.
 - Identified and drove technical requirements insights for an online feature big-data architecture by deeply engaging with unstructured data using GroundingDINO, SAM, DPT, Plotly, OpenCV and CoTracker — https://go.alejandroarmas.dev/RXsjI5F
-- Built online ML feature pipeline and achieving a 8x scalable architecture using a message passing technology (Redpanda), with Avro serialization and creating features with Apache Flink in Java. Monitoring app through Prometheus and Grafana integration
-- Ensured strict data privacy by leveraging AWS IAM roles/policies, packaging dependencies using Poetry and Docker, and streamlining S3 deployment through Terraform and GitHub Actions — https://go.alejandroarmas.dev/LkQpB2H
-
+    
 ### [some-dl-models](https://github.com/alejandroarmas/some-dl-models) | Jan 2023 - Apr 2023
 **Tech: PyTorch, comet ml, Poetry, ONNX, Github Actions**
-- Trained models such as CNN, LSTM and GNN to achieve successful outcomes on CIFAR, Pubmed and Reddit datasets.
-- Drove operational excellence using strong foundation in coding for code quality; My efforts saved approximately 100 hours of productivity through automation with Poetry, static-analysis, unit-testing, and developing a CI/CD pipeline with GitHub Actions — https://go.alejandroarmas.dev/7hP863H
+- Designed and implemented CI/CD pipeline that automated training artifact captures and visualizations saving team **~100 hours** of productivity in implementing MLP, CNN, RNN, and GNN models using comet-ml, Poetry, static-analysis, unit-testing, and GitHub Actions — go.alejandroarmas.dev/7hP863H
 
 ### [MLOPS Question + Answer Bot](https://alejandroarmas.github.io/post/sf-llm-stack-hackathon/) | Mar 2023 - Mar 2023
 **Tech: Relevence AI, Redis, OpenAI**
-- Developed a LLM pipeline for Q/A using Redis Vector Search, achieving 3rd place at MLOps.community LLM SF Hackathon
+- Implemented Vector Search in Q/A Bot and contributed to team being awarded **Top 3** at MLOps.community LLM SF Hackathon leveraging Redis and OpenAI APIs — go.alejandroarmas.dev/VstnG18
 
 ### [Automatic Differentiation Backpropagation Engine](https://github.com/alejandroarmas/Wirikuta) | Dec. 2021 - Jun. 2022
 **Tech: C++20, C++17, C++14, OpenCilk, doctest, Catch2**
--   Constructed engine to dynamically build directed acyclic graphs of tensors and computational operations at runtime. Each node contains a statically built finite state automata, for traversal policies such as gradient descent.
+-  Build Deep Learning framework which dynamically builds directed acyclic graphs of tensors and computational operations at runtime. Each node contains a statically built finite state automata, for traversal policies such as gradient descent.
 -   Achieved **142x speedup** over naive Matrix Multiply and **10x speedup** on transpose operations by implementing Parallel Divide and Conquer algorithms and representing matrices in row-major order for reduced cache misses.
 
 ### [D-Cash Wallet Web Server](https://github.com/alejandroarmas/gunrock_web) |  May 2021 - Jun. 2021    
@@ -61,10 +59,8 @@ rootFontSize = "90%"
 
 ### Davis In-Order CPU | Mar 2021 - Jun 2021
 **Tech: Chisel, Scala, RISC-V, Python, Pandas and Matplotlib**
-- Developed a comprehensive RV32I Pipelined CPU design using Chisel HDL, incorporating several functional units such as
-Branch Predictor, Hazard Unit, Forwarding Unit, ALU, ALU Control Unit, and Control Unit.
-- Conducted extensive simulations and analysis comparing the performance of single-cycle and pipelined designs. Utilized
-four different branch predictors and varied saturation bits over six workloads to create detailed visualizations.
+- Developed a comprehensive RV32I Pipelined CPU design using Chisel HDL, incorporating several functional units such as Branch Predictor, Hazard Unit, Forwarding Unit, ALU, ALU Control Unit, and Control Unit.
+- Conducted extensive simulations and analysis comparing the performance of single-cycle and pipelined designs. Utilized four different branch predictors and varied saturation bits over six workloads to create detailed visualizations.
 
 ### [Lineage-based Data Store](https://github.com/p3terlo/lstore_db) | Jan 2021 - Apr 2021
 **Tech: Python, Git**
